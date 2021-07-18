@@ -15,5 +15,5 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 				false
 			}] call zen_common_fnc_messageBox;
 		};
-	}, "scripts\tts_emission\icons\tts_emission.paa"] call zen_custom_modules_fnc_register;
+	}, "tts_emission\icons\tts_emission.paa"] call zen_custom_modules_fnc_register;
 };

@@ -141,5 +141,5 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 				];
 			}, {}, [] // args
 		] call zen_dialog_fnc_create;
-	}, "scripts\tts_emission\icons\tts_settings.paa"] call zen_custom_modules_fnc_register;
+	}, "tts_emission\icons\tts_settings.paa"] call zen_custom_modules_fnc_register;
 };

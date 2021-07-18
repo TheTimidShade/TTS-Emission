@@ -1,7 +1,7 @@
 class tts_emission
 {
 	class emission {
-		file = "scripts\tts_emission\functions";
+		file = "tts_emission\functions";
 		class startEmission {};
 		class isSafe {};
 		class damagePlayer {};
@@ -12,14 +12,14 @@ class tts_emission
 		class getPlayerDistance {};
 	};
 	class stages {
-		file = "scripts\tts_emission\functions\stages";
+		file = "tts_emission\functions\stages";
 		class buildup {};
 		class impact {};
 		class wave {};
 		class waveMapSweeper {};
 	};
 	class effects {
-		file = "scripts\tts_emission\functions\effects";
+		file = "tts_emission\functions\effects";
 		class soundAbovePlayer {};
 		class rumble {};
 		class waveEffect {};
@@ -30,9 +30,14 @@ class tts_emission
 		class psyEffect {};
 	};
 	class zen {
-		file = "scripts\tts_emission\functions\zen";
+		file = "tts_emission\functions\zen";
 		class initCustomModules {preInit = 1;};
 		class module_changeSettings {};
 		class module_startEmission {};
+	}
+	class modules {
+		file = "tts_emission\functions\modules";
+		class editor_moduleEmissionSettings {};
+		class editor_moduleStartEmission {};
 	}
 };
