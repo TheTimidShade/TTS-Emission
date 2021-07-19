@@ -22,16 +22,16 @@ _mainLight setLightBrightness 0;
 _mainLight setLightColor [1,0.5,0.5];
 _mainLight lightAttachObject [player, [0,0,1000]];
 
-for "_i" from 0 to _mainBrightness/2 do {
-	_mainLight setLightBrightness _i*2;
-	sleep (_delay/(_mainBrightness/2));
+for "_i" from 0 to _mainBrightness do {
+	_mainLight setLightBrightness _i;
+	sleep (_delay/_mainBrightness);
 };
 
 waitUntil {sleep 1; tts_emission_progressState > 4};
 
-for "_i" from 0 to _mainBrightness/2 do {
-	_mainLight setLightBrightness _mainBrightness - (_i*2);
-	sleep (_delay/(_mainBrightness/2));
+for "_i" from 0 to _mainBrightness do {
+	_mainLight setLightBrightness _mainBrightness - _i;
+	sleep (_delay/_mainBrightness);
 };
 
 deleteVehicle _mainLight;

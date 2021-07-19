@@ -92,7 +92,7 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 				],
 				["EDIT", ["Wave speed", "Speed in m/s wave travels (only applies to map sweep emission)"],
 					[ // control args
-						str tts_emission_wave_speed, // default text
+						str tts_emission_waveSpeed, // default text
 						{}, // sanitise function
 						1 // edit box height (only for multi line)
 					],
@@ -122,7 +122,7 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 				tts_emission_useSirenObject = _dialogResult#5;
 				tts_emission_protectionEquipment = (_dialogResult#6) splitString ",";
 				tts_emission_immuneUnits = (_dialogResult#7) splitString ",";
-				tts_emission_wave_speed = parseNumber (_dialogResult#8);
+				tts_emission_waveSpeed = parseNumber (_dialogResult#8);
 				tts_emission_showEmissionOnMap = _dialogResult#9;
 				tts_emission_disableRain = _dialogResult#10;
 
@@ -135,7 +135,7 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 					"tts_emission_useSirenObject",
 					"tts_emission_protectionEquipment",
 					"tts_emission_immuneUnits",
-					"tts_emission_wave_speed",
+					"tts_emission_waveSpeed",
 					"tts_emission_showEmissionOnMap",
 					"tts_emission_disableRain"
 				];
