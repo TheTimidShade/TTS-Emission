@@ -56,5 +56,10 @@ Player and AI effect parameters can be these values:
 ## Changelog
 Read below for complete changelog history.
 
+### 19/07/2021
+- Adjusted update rate of emission lighting.
+- Fixed dodgy loop code causing crash.
+- Fixed bug where updating settings via ZEN module would break the map sweep wave.
+
 ### 18/07/2021
 - Created repository.

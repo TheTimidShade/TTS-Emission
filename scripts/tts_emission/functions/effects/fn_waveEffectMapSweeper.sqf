@@ -33,13 +33,12 @@ _waveObject spawn { // handle sound
 
 [_waveObject, 1400] spawn { // handle cam shake
 	params ["_waveObject", "_distance"];
-
 	enableCamShake true;
 	while {alive _waveObject} do {
-		waitUntil {sleep 0.1; call tts_emission_fnc_getPlayerDistance < 3000};
-		playSound "blowout_wave_01";
-		waitUntil {sleep 0.1; call tts_emission_fnc_getPlayerDistance < _distance};
-		while {call tts_emission_fnc_getPlayerDistance < _distance} do {
+		waitUntil {sleep 0.1; !alive _waveObject || {player distance2D _waveObject < 3000}};
+		if (alive _waveObject) then {playSound "blowout_wave_01"};
+		waitUntil {sleep 0.1; !alive _waveObject || {player distance2D _waveObject < 1400}};
+		while {alive _waveObject && {player distance2D _waveObject < 1400}} do {
 			private _shakeCoef = 1-((player distance _waveObject)/_distance); // shake intensifies as wave approaches
 			addCamShake [3*(_shakeCoef^2), 2, 10];
 			sleep 0.2;
@@ -54,7 +53,7 @@ while {!tts_emission_wave_finished} do {
 	
 	_waveObject setPos _wavePos;
 
-	if (call tts_emission_fnc_getPlayerDistance < 3000) then { // only drop particles when wave is within 3km
+	if (player distance2D _waveObject < 3000) then { // only drop particles when wave is within 3km
 		for "_dst" from 0 to 20 do { // spawn single wave of particles
 			private _offsetX = ((random 3) - 6);
 			private _offsetY = ((random 12) - 24);
@@ -77,7 +76,7 @@ while {!tts_emission_wave_finished} do {
 	};
 	
 	// when the wave gets close handle player damage
-	if (call tts_emission_fnc_getPlayerDistance < 40) then {
+	if (player distance2D _waveObject < 40) then {
 		[] spawn tts_emission_fnc_damagePlayer; // handle effects on player
 	};
 

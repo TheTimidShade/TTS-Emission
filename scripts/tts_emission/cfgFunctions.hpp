@@ -9,7 +9,6 @@ class tts_emission
 		class hasProtection {};
 		class isZombie {};
 		class isSafeType {};
-		class getPlayerDistance {};
 	};
 	class stages {
 		file = "scripts\tts_emission\functions\stages";

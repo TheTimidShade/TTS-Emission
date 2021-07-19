@@ -13,10 +13,10 @@
 
 if (!isServer) exitWith {}; // only run on server
 
-if (isNil "tts_emission_wave_speed") then {tts_emission_wave_speed = 125; publicVariable "tts_emission_wave_speed";};
+if (isNil "tts_emission_waveSpeed") then {tts_emission_waveSpeed = 125; publicVariable "tts_emission_waveSpeed";};
 
 private _startY = worldSize + 2000; // start 2km from northern world border
-private _moveStep = tts_emission_wave_speed/10; // default = 125m/s
+private _moveStep = tts_emission_waveSpeed/10; // default = 125m/s
 
 tts_emission_wave_finished = false; publicVariable "tts_emission_wave_finished";
 tts_emission_wave_yPos = _startY; publicVariable "tts_emission_wave_yPos";
@@ -56,5 +56,7 @@ for [{private _wvPos = _startY}, {_wvPos > -2000}, {_wvPos = _wvPos - _moveStep}
 	sleep 0.1;
 };
 
+// cleanup
+deleteVehicle _waveKillTrigger;
 deleteMarker _waveMarker; deleteMarker _waveMarker2;
 tts_emission_wave_finished = true; publicVariable "tts_emission_wave_finished";
