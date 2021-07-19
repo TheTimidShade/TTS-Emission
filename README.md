@@ -4,7 +4,7 @@ Designed for Arma 3, this script allows mission makers and Zeuses to trigger an 
 
 There are two types of emissions to choose from:  
 
-**Map Sweep** - The emission will sweep the map from North to South, so the time at which units are hit by the wave is dynamic depending on their position on the map. 
+**Map Sweep** - The emission will sweep the map from North to South, so the time at which units are hit by the wave is dynamic depending on their position on the map. The 'Wave Speed' and 'Show Emission on Map' parameters only apply to this emission type.  
 
 **Fixed Distance** - The emission will start at a fixed distance away from players so all players and units on the map are hit at the same time. Since the emission is fixed to the player, no matter how fast you fly away from the wave it will still hit you, so this can look weird from aircraft. Mainly suited towards player only/infantry/RP missions. (This was v1 before I designed the map sweep version)
 
