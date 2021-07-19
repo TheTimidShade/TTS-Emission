@@ -24,7 +24,7 @@ if (!isServer) exitWith {};
 if (_activated) then {
 	private _emissionType = _module getVariable ["EmissionType", 0];
 	private _playerEffect = _module getVariable ["PlayerEffect", 0];
-	private _aiEffect = _module getVariable ["AIEffect", 0];
+	private _aiEffect = _module getVariable ["AIEffect", 1];
 	private _aircraftEffect = _module getVariable ["AircraftEffect", 0];
 	private _sirenType = _module getVariable ["SirenType", 0];
 	private _useSirenObject = _module getVariable ["UsePhysicalSiren", false];
