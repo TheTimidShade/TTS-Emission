@@ -10,8 +10,8 @@ There are two types of emissions to choose from:
 
 You will not be able to use this script from Zeus unless Zeus Enhanced is loaded.
 
-Demo Video: N/A  
-Steam Workshop page: N/A  
+Demo Video: https://www.youtube.com/watch?v=45dQugEdcTo  
+Steam Workshop page: https://steamcommunity.com/sharedfiles/filedetails/?id=2552184110  
 Zeus Enhanced: https://steamcommunity.com/sharedfiles/filedetails/?id=1779063631  
 
 ## Features:
