@@ -4,6 +4,11 @@ Source code for mod version of my Emission/Blowout Script.
 ## Changelog
 Read below for complete changelog history.
 
+### 20/07/2021
+Applied changes from script version:
+- Fixed some sounds playing at incorrect height when player is on buildings.
+- Adjusted length of lightning flashes.
+
 ### 19/07/2021
 Applied changes from script version:
 - Adjusted update rate of emission lighting.
