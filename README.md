@@ -56,6 +56,10 @@ Player and AI effect parameters can be these values:
 ## Changelog
 Read below for complete changelog history.
 
+### 20/07/2021
+- Fixed some sounds playing at incorrect height when player is on buildings.
+- Adjusted length of lightning flashes.
+
 ### 19/07/2021
 - Adjusted update rate of emission lighting.
 - Fixed dodgy loop code causing crash.

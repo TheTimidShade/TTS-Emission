@@ -21,10 +21,10 @@ while {tts_emission_progressState <= 4} do {
 
 	// create bright flash for lightning effect
 	if (selectRandom [true, false]) then { // one flash
-		[500, 0.05] spawn tts_emission_fnc_flash;
+		[500, 0.1 + random 0.1] spawn tts_emission_fnc_flash;
 	} else { // two flashes
-		[500, 0.05] spawn tts_emission_fnc_flash;
-		sleep 0.1;
-		[500, 0.05] spawn tts_emission_fnc_flash;
+		[500, 0.1 + random 0.1] spawn tts_emission_fnc_flash;
+		sleep 0.15;
+		[500, 0.1 + random 0.1] spawn tts_emission_fnc_flash;
 	};
 };
