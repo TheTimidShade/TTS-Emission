@@ -8,6 +8,7 @@ Read below for complete changelog history.
 Applied changes from script version:
 - Fixed some sounds playing at incorrect height when player is on buildings.
 - Adjusted length of lightning flashes.
+- Increased distance above head for roof check from 5m to 10m.
 
 ### 19/07/2021
 Applied changes from script version:

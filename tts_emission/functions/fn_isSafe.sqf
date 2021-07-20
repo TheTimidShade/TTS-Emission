@@ -22,7 +22,7 @@ if ((typeOf _unit) in tts_emission_immuneUnits || (vehicleVarName _unit) in tts_
 private _isSafe = false;
 if (isPlayer _unit) then {
 	private _eyePos = eyePos _unit;
-	private _endPos = [_eyePos#0, _eyePos#1, _eyePos#2+5];
+	private _endPos = [_eyePos#0, _eyePos#1, _eyePos#2+10];
 
 	private _intersectObjects = lineIntersectsWith [_eyePos, _endPos, _unit, objNull, true]; // check if there are any objects above player's head for 5m
 
