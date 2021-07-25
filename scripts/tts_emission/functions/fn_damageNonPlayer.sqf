@@ -41,7 +41,7 @@ private _disabledUnits = [];
 			};
 		} else { // if the unit is not in an air vehicle
 			if (!(_unit call tts_emission_fnc_isSafe) || tts_emission_aiEffect in [2,3]) then { // check if they are safe from the emission
-				if (tts_emission_aiEffect in [0,2]) then { // if emission is lethal to ai
+				if (tts_emission_aiEffect in [0,2] && !(_unit call tts_emission_fnc_hasProtection)) then { // if emission is lethal to ai
 					_unit setDamage 1;
 				} else { // if emission is non-lethal disable them temporarily
 					if (!(_unit getVariable ["tts_emission_ai_isUnconscious", false])) then {

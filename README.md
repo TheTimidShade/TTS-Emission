@@ -56,6 +56,9 @@ Player and AI effect parameters can be these values:
 ## Changelog
 Read below for complete changelog history.
 
+### 25/07/2021
+- AI units can now be protected by whitelisted protection equipment the same as players.
+
 ### 20/07/2021
 - Fixed some sounds playing at incorrect height when player is on buildings.
 - Adjusted length of lightning flashes.
