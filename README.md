@@ -6,6 +6,10 @@ Read below for complete changelog history.
 
 ### 25/07/2021
 Applied changes from script version:
+- Increased shelter check distance from 10m to 30m.
+
+### 25/07/2021
+Applied changes from script version:
 - AI units can now be protected by whitelisted protection equipment the same as players.
 
 ### 20/07/2021
