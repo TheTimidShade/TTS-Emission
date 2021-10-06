@@ -56,6 +56,9 @@ Player and AI effect parameters can be these values:
 ## Changelog
 Read below for complete changelog history.
 
+### 06/10/2021
+- Increased shelter check distance from 10m to 30m.
+
 ### 25/07/2021
 - AI units can now be protected by whitelisted protection equipment the same as players.
 
