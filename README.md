@@ -4,6 +4,9 @@ Source code for mod version of my Emission/Blowout Script.
 ## Changelog
 Read below for complete changelog history.
 
+### 09/10/2021
+- Added compatibility for upcoming AIO mod.
+
 ### 25/07/2021
 Applied changes from script version:
 - Increased shelter check distance from 10m to 30m.
