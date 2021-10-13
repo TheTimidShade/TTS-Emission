@@ -203,7 +203,7 @@ private _isZombie = [_unit] call tts_emission_fnc_isZombie;
 ```
 
 <br/>**tts_emission_fnc_psyEffect**  
-Plays a 'Psy' style effect on the player's screen. This can be quite nauseating since the effect is quite intense, use in moderation. Used internally when a player is knocked out by the emission. Must be executed locally on the player's machine you want the effect to play on.
+Typo in the function name that I may fix in the future. Plays a 'psi' style effect on the player's screen. This can be quite nauseating since the effect is quite intense, use in moderation. Used internally when a player is knocked out by the emission. Must be executed locally on the player's machine you want the effect to play on.
 ```
 Parameters:  
   NONE
