@@ -221,51 +221,21 @@ ___
 ## Changelog
 Read below for complete changelog history.
 
-### 13/10/2021
-- Cleaned up README file, improved instructions, added some more examples and documentation for the different functions.
+### 06/10/2021
+- Increased shelter check distance from 10m to 30m.
 
-### 13/08/2021
-- Fixed bug that caused cloaked players to remain invisible to the host player after uncloaking in locally hosted multiplayer games.
+### 25/07/2021
+- AI units can now be protected by whitelisted protection equipment the same as players.
 
-### 22/07/2021
-- 'Cloak Unit' ZEN module has been renamed to 'Cloak Unit(s)' and now has a second parameter that will apply the cloak effect to the unit's group if enabled.
+### 20/07/2021
+- Fixed some sounds playing at incorrect height when player is on buildings.
+- Adjusted length of lightning flashes.
+- Increased distance above head for roof check from 5m to 10m.
 
-### 12/07/2021
-- Added custom ZEN icons.
+### 19/07/2021
+- Adjusted update rate of emission lighting.
+- Fixed dodgy loop code causing crash.
+- Fixed bug where updating settings via ZEN module would break the map sweep wave.
 
-### 23/04/2021
-- Implemented Majestic Iranian Kebab's collision fix (NOTE: Local player's character will no longer be hidden when in third person).
-
-### 12/04/2021
-- Removed need to execute `fn_initCloak` and `fn_customZeusModules` manually.
-- Removed Achilles compatibility (no longer supported).
-
-### 11/02/2021
-- Added Twiznak's active camouflage functionality for vehicles using PIP cameras.
-- Added 'Give Active Camouflage' module to allow dynamic adding of vehicle active camo.  
-- Added ability to remove vehicle active camo using 'Remove Cloak' module.  
-- Minor tweaks to hopefully make the script more JIP compatible.
-- Cloaking AI now properly prevents them from shooting while they are cloaked by disabling "TARGET" and "AUTOTARGET" AI, will preserve state if the AI had this disabled already before cloaking.
-- Fixed a typo in `fn_giveCloak` which would cause issues with interaction menu actions.
-- Added a new setting and display to show/hide vehicle camo UI seperately to cloak UI.
-
-### 08/02/2021
-- Tweaked particles slightly to decrease unit visibility.
-
-### 05/02/2021
-- Adjusted `fn_customZeusModules` slightly so it should correctly add the modules more reliably.
-
-### 04/02/2021
-- Fixed positioning and size of some particle drop points.
-- Made parameters global variables instead of parameters for init so they can be changed on the fly easier.
-- Added compatibility for Achilles/ZEN.
-
-### 25/01/2021
-- Added possibility to use headgear as cloak requirement as well.
-
-### 22/01/2021
-- Fixed sound sources not being created at correct position when units were not near terrain.
-- Adjusted cloak in/out transition to be created at centre of mass instead of feet.
-
-### 11/01/2021
-- Initial upload to GitHub.
+### 18/07/2021
+- Created repository.
