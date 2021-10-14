@@ -11,6 +11,8 @@
 		NONE
 */
 
+if (isClass(configFile >> "CfgPatches" >> "tts_effects_aio") && {missionNamespace getVariable ["tts_effects_aio_disable_emission", false]}) exitWith {};
+
 [] spawn {
 
 waitUntil {sleep 1; player == player && !isNull getAssignedCuratorLogic player};
