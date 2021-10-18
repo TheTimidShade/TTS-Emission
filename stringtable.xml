@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="TTS Emission">
+    <Package name="General">
+        <Key ID="STR_tts_emission_default">
+            <Original>Default</Original>
+            <English>Default</English>
+        </Key>
+        <Key ID="STR_tts_emission_true">
+            <Original>True</Original>
+            <English>True</English>
+        </Key>
+        <Key ID="STR_tts_emission_false">
+            <Original>False</Original>
+            <English>False</English>
+        </Key>
+        <Key ID="STR_tts_emission_none">
+            <Original>None</Original>
+            <English>None</English>
+        </Key>
+    </Package>
+    <Package name="Modules">
+		<Container name="Change settings module">	
+            <Key ID="STR_tts_emission_moduleChangeSettings_title">
+				<Original>Change Settings</Original>
+				<English>Change Settings</English>
+			</Key>
+            <Key ID="STR_tts_emission_moduleChangeSettings_title_alt">
+				<Original>Emission Settings</Original>
+				<English>Emission Settings</English>
+			</Key>
+            <Key ID="STR_tts_emission_moduleChangeSettings_desc">
+				<Original>Configures settings for TTS Emission script.</Original>
+				<English>Configures settings for TTS Emission script.</English>
+			</Key>
+            <Key ID="STR_tts_emission_moduleChangeSettings_heading">
+				<Original>Configure Emission Settings</Original>
+				<English>Configure Emission Settings</English>
+			</Key>
+            <Key ID="STR_tts_emission_moduleChangeSettings_warning">
+				<Original>WARNING: Some setting changes may not apply until after the emission is finished!</Original>
+				<English>WARNING: Some setting changes may not apply until after the emission is finished!</English>
+			</Key>
+            <Container name="Emission type param">
+                <Key ID="STR_tts_emission_moduleChangeSettings_emissionType">
+                    <Original>Emission type</Original>
+                    <English>Emission type</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_emissionType_desc">
+                    <Original>Which wave type to use for the emission.\nMap Sweep - Wave passes over entire map from the North, the wave will hit areas at the top of the map earlier\nFixed Distance - Wave is always a fixed distance from players but will hit all units on the map at the same time (good for infantry only/PVP/RP missions)</Original>
+                    <English>Which wave type to use for the emission.\nMap Sweep - Wave passes over entire map from the North, the wave will hit areas at the top of the map earlier\nFixed Distance - Wave is always a fixed distance from players but will hit all units on the map at the same time (good for infantry only/PVP/RP missions)</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_emissionType_mapSweep">
+                    <Original>Map Sweep</Original>
+                    <English>Map Sweep</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_emissionType_fixedDistance">
+                    <Original>Fixed Distance</Original>
+                    <English>Fixed Distance</English>
+                </Key>
+            </Container>
+            <Key ID="STR_tts_emission_moduleChangeSettings_emissionEffect_killUnsheltered">
+                <Original>Kill unsheltered</Original>
+                <English>Kill unsheltered</English>
+            </Key>
+            <Key ID="STR_tts_emission_moduleChangeSettings_emissionEffect_knockoutUnsheltered">
+                <Original>Knockout unsheltered</Original>
+                <English>Knockout unsheltered</English>
+            </Key>
+            <Key ID="STR_tts_emission_moduleChangeSettings_emissionEffect_killAll">
+                <Original>Kill all</Original>
+                <English>Kill all</English>
+            </Key>
+            <Key ID="STR_tts_emission_moduleChangeSettings_emissionEffect_knockoutAll">
+                <Original>Knockout all</Original>
+                <English>Knockout all</English>
+            </Key>
+            <Key ID="STR_tts_emission_moduleChangeSettings_emissionEffect_noEffect">
+                <Original>No effect</Original>
+                <English>No effect</English>
+            </Key>
+            <Container name="Player effect param">
+                <Key ID="STR_tts_emission_moduleChangeSettings_playerEffect">
+                    <Original>Player effect</Original>
+                    <English>Player effect</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_playerEffect_desc">
+                    <Original>How should the emission affect player units?</Original>
+                    <English>How should the emission affect player units?</English>
+                </Key>
+            </Container>
+            <Container name="AI effect param">
+                <Key ID="STR_tts_emission_moduleChangeSettings_aiEffect">
+                    <Original>AI effect</Original>
+                    <English>AI effect</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_aiEffect_desc">
+                    <Original>How should the emission affect non-player units?</Original>
+                    <English>How should the emission affect non-player units?</English>
+                </Key>
+            </Container>
+            <Container name="Aircraft effect param">
+                <Key ID="STR_tts_emission_moduleChangeSettings_aircraftEffect">
+                    <Original>Aircraft effect</Original>
+                    <English>Aircraft effect</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_aircraftEffect_desc">
+                    <Original>How does the emission affect flying aircraft (altitude > 15m)</Original>
+                    <English>How does the emission affect flying aircraft (altitude > 15m)</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_aircraftEffect_lightningBolt">
+                    <Original>Lightning bolt</Original>
+                    <English>Lightning bolt</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_aircraftEffect_engineFailure">
+                    <Original>Engine failure</Original>
+                    <English>Engine failure</English>
+                </Key>
+            </Container>
+            <Container name="Siren type param">
+                <Key ID="STR_tts_emission_moduleChangeSettings_sirenType">
+                    <Original>Siren type</Original>
+                    <English>Siren type</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_sirenType_desc">
+                    <Original>What type of siren should play to warn of the emission</Original>
+                    <English>What type of siren should play to warn of the emission</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_sirenType_classic">
+                    <Original>Classic</Original>
+                    <English>Classic</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_sirenType_dramatic">
+                    <Original>Dramatic</Original>
+                    <English>Dramatic</English>
+                </Key>
+            </Container>
+            <Container name="Use physical siren param">
+                <Key ID="STR_tts_emission_moduleChangeSettings_usePhysicalSiren">
+                    <Original>Use physical siren</Original>
+                    <English>Use physical siren</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_usePhysicalSiren_desc">
+                    <Original>If checked, siren will play from the object with varname 'tts_emission_sirenObj' if found (can only be one per mission)</Original>
+                    <English>If checked, siren will play from the object with varname 'tts_emission_sirenObj' if found (can only be one per mission)</English>
+                </Key>
+            </Container>
+            <Container name="Protection equipment param">
+                <Key ID="STR_tts_emission_moduleChangeSettings_protectionEquipment">
+                    <Original>Protection equipment</Original>
+                    <English>Protection equipment</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_protectionEquipment_desc">
+                    <Original>Comma seperated classnames of headgear, facewear, NVGs, uniforms, vests or bags that units can wear to survive emissions outside of shelter</Original>
+                    <English>Comma seperated classnames of headgear, facewear, NVGs, uniforms, vests or bags that units can wear to survive emissions outside of shelter</English>
+                </Key>
+            </Container>
+            <Container name="Immune units param">
+                <Key ID="STR_tts_emission_moduleChangeSettings_immuneUnits">
+                    <Original>Immune units</Original>
+                    <English>Immune units</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_immuneUnits_desc">
+                    <Original>Comma seperated classnames or variable names of units that are not affected by emissions</Original>
+                    <English>Comma seperated classnames or variable names of units that are not affected by emissions</English>
+                </Key>
+            </Container>
+            <Container name="Wave speed param">
+                <Key ID="STR_tts_emission_moduleChangeSettings_waveSpeed">
+                    <Original>Wave speed</Original>
+                    <English>Wave speed</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_waveSpeed_desc">
+                    <Original>Speed in m/s wave travels (only applies to map sweep emission)</Original>
+                    <English>Speed in m/s wave travels (only applies to map sweep emission)</English>
+                </Key>
+            </Container>
+            <Container name="Show emission on map param">
+                <Key ID="STR_tts_emission_moduleChangeSettings_showEmissionOnMap">
+                    <Original>Show emission on map</Original>
+                    <English>Show emission on map</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_showEmissionOnMap_desc">
+                    <Original>If checked, the emission's position will be displayed on the map</Original>
+                    <English>If checked, the emission's position will be displayed on the map</English>
+                </Key>
+            </Container>
+            <Container name="Disable rain effects param">
+                <Key ID="STR_tts_emission_moduleChangeSettings_rainEffects">
+                    <Original>Disable rain effects</Original>
+                    <English>Disable rain effects</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_rainEffects_desc">
+                    <Original>If checked, rain after the emission finishes will be disabled (tick this if using weather scripts)</Original>
+                    <English>If checked, rain after the emission finishes will be disabled (tick this if using weather scripts)</English>
+                </Key>
+            </Container>
+        </Container>
+        <Container name="Start emission module">
+            <Key ID="STR_tts_emission_moduleStartEmission_title">
+				<Original>Start Emission</Original>
+				<English>Start Emission</English>
+			</Key>
+            <Key ID="STR_tts_emission_moduleStartEmission_desc">
+				<Original>Starts an emission when all synced triggers are activated.</Original>
+				<English>Starts an emission when all synced triggers are activated.</English>
+			</Key>
+            <Key ID="STR_tts_emission_moduleStartEmission_heading">
+				<Original>Confirm Emission</Original>
+				<English>Confirm Emission</English>
+			</Key>
+            <Key ID="STR_tts_emission_moduleStartEmission_inProgress">
+				<Original>Emission already in progress!</Original>
+				<English>Emission already in progress!</English>
+			</Key>
+            <Key ID="STR_tts_emission_moduleStartEmission_warning">
+				<Original>Are you sure you want to start an emission? Once started the emission cannot be stopped until it is complete.</Original>
+				<English>Are you sure you want to start an emission? Once started the emission cannot be stopped until it is complete.</English>
+			</Key>
+            <Key ID="STR_tts_emission_moduleStartEmission_emissionApproaching">
+				<Original>An emission is approaching!</Original>
+				<English>An emission is approaching!</English>
+			</Key>
+        </Container>
+	</Package>
+</Project>

@@ -1,11 +1,11 @@
 // ZEUS ENHANCED ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
-	["TTS Emission", "Change Settings",
+	["TTS Emission", "STR_tts_emission_moduleChangeSettings_title",
 	{
 		params [["_position", [0,0,0], [[]], 3], ["_attachedObject", objNull, [objNull]]];
 
 		if (isNil "tts_emission_emissionIsActive") then {tts_emission_emissionIsActive = false;};
-		if (tts_emission_emissionIsActive) then {systemChat "WARNING: Some setting changes may not apply until after the emission is finished!";};
+		if (tts_emission_emissionIsActive) then {systemChat localize "STR_tts_emission_moduleChangeSettings_warning";};
 
 		// set up settings if they are undefined
 		if (isNil "tts_emission_emissionType") then {tts_emission_emissionType = 0;};
@@ -26,55 +26,55 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 		_immunePlaceholder = tts_emission_immuneUnits joinString ",";
 
 		[
-			"Configure Emission Settings", // title
+			"STR_tts_emission_moduleChangeSettings_heading", // title
 		 	[ // array of controls for dialog
-				["COMBO", ["Emission type", "Which wave type to use for the emission.\nMap Sweep - Wave passes over entire map from the North, the wave will hit areas at the top of the map earlier\nFixed Distance - Wave is always a fixed distance from players but will hit all units on the map at the same time (good for infantry only/PVP/RP missions)"],
+				["COMBO", ["STR_tts_emission_moduleChangeSettings_emissionType", "STR_tts_emission_moduleChangeSettings_emissionType_desc"],
 					[ // control args
 						[0, 1], // return values
-						["Map Sweep", "Fixed Distance"], // labels
+						["STR_tts_emission_moduleChangeSettings_emissionType_mapSweep", "STR_tts_emission_moduleChangeSettings_emissionType_fixedDistance"], // labels
 						tts_emission_emissionType // element 0 is default selected
 					],
 					true // force default
 				],
-				["COMBO", ["Player effect", "How does the emission affect player units"],
+				["COMBO", ["STR_tts_emission_moduleChangeSettings_playerEffect", "STR_tts_emission_moduleChangeSettings_playerEffect_desc"],
 					[ // control args
 						[0, 1, 2, 3, 4], // return values
-						["Kill unsheltered", "Knockout unsheltered", "Kill all", "Knockout all", "No effect"], // labels
+						["STR_tts_emission_moduleChangeSettings_emissionEffect_killUnsheltered", "STR_tts_emission_moduleChangeSettings_emissionEffect_knockoutUnsheltered", "STR_tts_emission_moduleChangeSettings_emissionEffect_killAll", "STR_tts_emission_moduleChangeSettings_emissionEffect_knockoutAll", "STR_tts_emission_moduleChangeSettings_emissionEffect_noEffect"], // labels
 						tts_emission_playerEffect // element 0 is default selected
 					],
 					true // force default
 				],
-				["COMBO", ["AI effect", "How does the emission affect non-player units"],
+				["COMBO", ["STR_tts_emission_moduleChangeSettings_aiEffect", "STR_tts_emission_moduleChangeSettings_aiEffect_desc"],
 					[ // control args
 						[0, 1, 2, 3, 4], // return values
-						["Kill unsheltered", "Knockout unsheltered", "Kill all", "Knockout all", "No effect"], // labels
+						["STR_tts_emission_moduleChangeSettings_emissionEffect_killUnsheltered", "STR_tts_emission_moduleChangeSettings_emissionEffect_knockoutUnsheltered", "STR_tts_emission_moduleChangeSettings_emissionEffect_killAll", "STR_tts_emission_moduleChangeSettings_emissionEffect_knockoutAll", "STR_tts_emission_moduleChangeSettings_emissionEffect_noEffect"], // labels
 						tts_emission_aiEffect // element 0 is default selected
 					],
 					true // force default
 				],
-				["COMBO", ["Aircraft effect", "How does the emission affect flying aircraft (altitude > 15m)"],
+				["COMBO", ["STR_tts_emission_moduleChangeSettings_aircraftEffect", "STR_tts_emission_moduleChangeSettings_aircraftEffect_desc"],
 					[ // control args
 						[0, 1, 2], // return values
-						["Lightning bolt", "Engine failure", "No effect"], // labels
+						["STR_tts_emission_moduleChangeSettings_aircraftEffect_lightningBolt", "STR_tts_emission_moduleChangeSettings_aircraftEffect_engineFailure", "STR_tts_emission_moduleChangeSettings_emissionEffect_noEffect"], // labels
 						tts_emission_aircraftEffect // element 0 is default selected
 					],
 					true // force default
 				],
-				["COMBO", ["Siren type", "What type of siren should play to warn of the emission"],
+				["COMBO", ["STR_tts_emission_moduleChangeSettings_sirenType", "STR_tts_emission_moduleChangeSettings_sirenType_desc"],
 					[ // control args
 						[0, 1, 2], // return values
-						["Classic", "Dramatic", "None"], // labels
+						["STR_tts_emission_moduleChangeSettings_sirenType_classic", "STR_tts_emission_moduleChangeSettings_sirenType_dramatic", "STR_tts_emission_none"], // labels
 						tts_emission_sirenType // element 0 is default selected
 					],
 					true // force default
 				],
-				["CHECKBOX", ["Use physical siren", "If checked, siren will play from the object with varname 'tts_emission_sirenObj' if found (can only be one per mission)"],
+				["CHECKBOX", ["STR_tts_emission_moduleChangeSettings_usePhysicalSiren", "STR_tts_emission_moduleChangeSettings_usePhysicalSiren_desc"],
 					[ // control args
 						tts_emission_useSirenObject // default state
 					],
 					true // force default
 				],
-				["EDIT", ["Protection equipment", "Comma seperated classnames of headgear, facewear, NVGs, uniforms, vests or bags that units can wear to survive emissions outside of shelter"],
+				["EDIT", ["STR_tts_emission_moduleChangeSettings_protectionEquipment", "STR_tts_emission_moduleChangeSettings_protectionEquipment_desc"],
 					[ // control args
 						_protectionPlaceholder, // default text
 						{}, // sanitise function
@@ -82,7 +82,7 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 					],
 					true // force default
 				],
-				["EDIT", ["Immune units", "Comma seperated classnames or variable names of units that are not affected by emissions"],
+				["EDIT", ["STR_tts_emission_moduleChangeSettings_immuneUnits", "STR_tts_emission_moduleChangeSettings_immuneUnits_desc"],
 					[ // control args
 						_immunePlaceholder, // default text
 						{}, // sanitise function
@@ -90,7 +90,7 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 					],
 					true // force default
 				],
-				["EDIT", ["Wave speed", "Speed in m/s wave travels (only applies to map sweep emission)"],
+				["EDIT", ["STR_tts_emission_moduleChangeSettings_waveSpeed", "STR_tts_emission_moduleChangeSettings_waveSpeed_desc"],
 					[ // control args
 						str tts_emission_waveSpeed, // default text
 						{}, // sanitise function
@@ -98,13 +98,13 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 					],
 					true // force default
 				],
-				["CHECKBOX", ["Show emission on map", "If checked, the emission's position will be displayed on the map"],
+				["CHECKBOX", ["STR_tts_emission_moduleChangeSettings_showEmissionOnMap", "STR_tts_emission_moduleChangeSettings_showEmissionOnMap_desc"],
 					[ // control args
 						tts_emission_showEmissionOnMap // default state
 					],
 					true // force default
 				],
-				["CHECKBOX", ["Disable rain effects", "If checked, rain after the emission finishes will be disabled (tick this if using weather scripts)"],
+				["CHECKBOX", ["STR_tts_emission_moduleChangeSettings_rainEffects", "STR_tts_emission_moduleChangeSettings_rainEffects_desc"],
 					[ // control args
 						tts_emission_disableRain // default state
 					],

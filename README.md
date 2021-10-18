@@ -221,6 +221,9 @@ ___
 ## Changelog
 Read below for complete changelog history.
 
+### 18/10/2021
+- Added stringtable support to allow the script to be translated. If you are willing to help translate the script into another language, contact me in my Discord!
+
 ### 06/10/2021
 - Increased shelter check distance from 10m to 30m.
 
