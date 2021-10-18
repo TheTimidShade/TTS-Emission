@@ -104,8 +104,8 @@
                     <English>Aircraft effect</English>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_aircraftEffect_desc">
-                    <Original>How does the emission affect flying aircraft (altitude > 15m)</Original>
-                    <English>How does the emission affect flying aircraft (altitude > 15m)</English>
+                    <Original>How does the emission affect flying aircraft (altitude > 15m)?</Original>
+                    <English>How does the emission affect flying aircraft (altitude > 15m)?</English>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_aircraftEffect_lightningBolt">
                     <Original>Lightning bolt</Original>
@@ -122,8 +122,8 @@
                     <English>Siren type</English>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_sirenType_desc">
-                    <Original>What type of siren should play to warn of the emission</Original>
-                    <English>What type of siren should play to warn of the emission</English>
+                    <Original>What type of siren should play to warn of the emission?</Original>
+                    <English>What type of siren should play to warn of the emission?</English>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_sirenType_classic">
                     <Original>Classic</Original>
