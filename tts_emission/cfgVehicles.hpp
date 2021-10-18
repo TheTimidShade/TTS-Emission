@@ -31,7 +31,7 @@ class CfgVehicles {
 		isDisposable = 1; // 1 if modules is to be disabled once it's activated (i.e., repeated trigger activation won't work)
 		isGlobal = 0; // 0 for server only execution, 1 for global execution, 2 for persistent global execution
 		isTriggerActivated = 0;
-		displayName = "Emission Settings";
+		displayName = "$STR_tts_emission_moduleChangeSettings_title_alt";
 		icon = "tts_emission\icons\tts_settings.paa";
 		category = "tts_emission_modules";
 		function = "tts_emission_fnc_editor_moduleEmissionSettings";
@@ -39,109 +39,109 @@ class CfgVehicles {
 		class Attributes : AttributesBase {
 			class EmissionType : Combo {
 				property = "tts_emission_moduleEmissionSettings_EmissionType";
-				displayName = "Emission type";
-				tooltip = "Which wave type to use for the emission.\nMap Sweep - Wave passes over entire map from the North, the wave will hit areas at the top of the map earlier\nFixed Distance - Wave is always a fixed distance from players but will hit all units on the map at the same time (good for infantry only/PVP/RP missions)";
+				displayName = "$STR_tts_emission_moduleChangeSettings_emissionType";
+				tooltip = "$STR_tts_emission_moduleChangeSettings_emissionType_desc";
 				typeName = "NUMBER";
 				defaultValue = "0";
 				class Values
 				{
-					class MapSweep {name = "Map Sweep"; value = 0;}; // Listbox item
-					class FixedDistance {name = "Fixed Distance"; value = 1;};
+					class MapSweep {name = "$STR_tts_emission_moduleChangeSettings_emissionType_mapSweep"; value = 0;}; // Listbox item
+					class FixedDistance {name = "$STR_tts_emission_moduleChangeSettings_emissionType_fixedDistance"; value = 1;};
 				};
 			};
 			class PlayerEffect : Combo {
 				property = "tts_emission_moduleEmissionSettings_PlayerEffect";
-				displayName = "Player effect";
-				tooltip = "How does the emission affect player units";
+				displayName = "$STR_tts_emission_moduleChangeSettings_playerEffect";
+				tooltip = "$STR_tts_emission_moduleChangeSettings_playerEffect_desc";
 				typeName = "NUMBER";
 				defaultValue = "0";
 				class Values
 				{
-					class KillUnsheltered {name = "Kill unsheltered"; value = 0;}; // Listbox item
-					class KnockoutUnsheltered {name = "Knockout unsheltered"; value = 1;};
-					class KillAll {name = "Kill all"; value = 2;};
-					class KnockoutAll {name = "Knockout all"; value = 3;};
-					class NoEffect {name = "No effect"; value = 4;};
+					class KillUnsheltered {name = "$STR_tts_emission_moduleChangeSettings_emissionEffect_killUnsheltered"; value = 0;}; // Listbox item
+					class KnockoutUnsheltered {name = "$STR_tts_emission_moduleChangeSettings_emissionEffect_knockoutUnsheltered"; value = 1;};
+					class KillAll {name = "$STR_tts_emission_moduleChangeSettings_emissionEffect_killAll"; value = 2;};
+					class KnockoutAll {name = "$STR_tts_emission_moduleChangeSettings_emissionEffect_knockoutAll"; value = 3;};
+					class NoEffect {name = "$STR_tts_emission_moduleChangeSettings_emissionEffect_noEffect"; value = 4;};
 				};
 			};
 			class AIEffect : Combo {
 				property = "tts_emission_moduleEmissionSettings_AIEffect";
-				displayName = "AI effect";
-				tooltip = "How does the emission affect non-player units";
+				displayName = "$STR_tts_emission_moduleChangeSettings_aiEffect";
+				tooltip = "$STR_tts_emission_moduleChangeSettings_aiEffect_desc";
 				typeName = "NUMBER";
 				defaultValue = "0";
 				class Values
 				{
-					class KillUnsheltered {name = "Kill unsheltered"; value = 0;}; // Listbox item
-					class KnockoutUnsheltered {name = "Knockout unsheltered"; value = 1;};
-					class KillAll {name = "Kill all"; value = 2;};
-					class KnockoutAll {name = "Knockout all"; value = 3;};
-					class NoEffect {name = "No effect"; value = 4;};
+					class KillUnsheltered {name = "$STR_tts_emission_moduleChangeSettings_emissionEffect_killUnsheltered"; value = 0;}; // Listbox item
+					class KnockoutUnsheltered {name = "$STR_tts_emission_moduleChangeSettings_emissionEffect_knockoutUnsheltered"; value = 1;};
+					class KillAll {name = "$STR_tts_emission_moduleChangeSettings_emissionEffect_killAll"; value = 2;};
+					class KnockoutAll {name = "$STR_tts_emission_moduleChangeSettings_emissionEffect_knockoutAll"; value = 3;};
+					class NoEffect {name = "$STR_tts_emission_moduleChangeSettings_emissionEffect_noEffect"; value = 4;};
 				};
 			};
 			class AircraftEffect : Combo {
 				property = "tts_emission_moduleEmissionSettings_AircraftEffect";
-				displayName = "Aircraft effect";
-				tooltip = "How does the emission affect flying aircraft (altitude > 15m)";
+				displayName = "$STR_tts_emission_moduleChangeSettings_aircraftEffect";
+				tooltip = "$STR_tts_emission_moduleChangeSettings_aircraftEffect_desc";
 				typeName = "NUMBER";
 				defaultValue = "0";
 				class Values
 				{
-					class LightningBolt {name = "Lightning bolt"; value = 0;}; // Listbox item
-					class EngineFailure {name = "Engine failure"; value = 1;};
-					class NoEffect {name = "No effect"; value = 2;};
+					class LightningBolt {name = "$STR_tts_emission_moduleChangeSettings_aircraftEffect_lightningBolt"; value = 0;}; // Listbox item
+					class EngineFailure {name = "$STR_tts_emission_moduleChangeSettings_aircraftEffect_engineFailure"; value = 1;};
+					class NoEffect {name = "$STR_tts_emission_moduleChangeSettings_emissionEffect_noEffect"; value = 2;};
 				};
 			};
 			class SirenType : Combo {
 				property = "tts_emission_moduleEmissionSettings_SirenType";
-				displayName = "Siren type";
-				tooltip = "What type of siren should play to warn of the emission";
+				displayName = "$STR_tts_emission_moduleChangeSettings_sirenType";
+				tooltip = "$STR_tts_emission_moduleChangeSettings_sirenType_desc";
 				typeName = "NUMBER";
 				defaultValue = "0";
 				class Values
 				{
-					class Classic {name = "Classic"; value = 0;}; // Listbox item
-					class Dramatic {name = "Dramatic"; value = 1;};
-					class None {name = "None"; value = 2;};
+					class Classic {name = "$STR_tts_emission_moduleChangeSettings_sirenType_classic"; value = 0;}; // Listbox item
+					class Dramatic {name = "$STR_tts_emission_moduleChangeSettings_sirenType_dramatic"; value = 1;};
+					class None {name = "$STR_tts_emission_none"; value = 2;};
 				};
 			};
 			class UsePhysicalSiren : Checkbox {
 				property = "tts_emission_moduleEmissionSettings_UsePhysicalSiren";
-				displayName = "Use physical siren";
-				tooltip = "If checked, siren will play from the object with varname 'tts_emission_sirenObj' if found (can only be one per mission)";
+				displayName = "$STR_tts_emission_moduleChangeSettings_usePhysicalSiren";
+				tooltip = "$STR_tts_emission_moduleChangeSettings_usePhysicalSiren_desc";
 				defaultValue = "0";
 			};
 			class ProtectionEquipment : Edit {
 				property = "tts_emission_moduleEmissionSettings_ProtectionEquipment";
-				displayName = "Protection equipment";
-				tooltip = "Comma seperated classnames of headgear, facewear, NVGs, uniforms, vests or bags that units can wear to survive emissions outside of shelter";
+				displayName = "$STR_tts_emission_moduleChangeSettings_protectionEquipment";
+				tooltip = "$STR_tts_emission_moduleChangeSettings_protectionEquipment_desc";
 				typeName = "STRING";
 				defaultValue = """""";
 			};
 			class ImmuneUnits : Edit {
 				property = "tts_emission_moduleEmissionSettings_ImmuneUnits";
-				displayName = "Immune units";
-				tooltip = "Comma seperated classnames or variable names of units that are not affected by emissions";
+				displayName = "$STR_tts_emission_moduleChangeSettings_immuneUnits";
+				tooltip = "$STR_tts_emission_moduleChangeSettings_immuneUnits_desc";
 				typeName = "STRING";
 				defaultValue = """""";
 			};
 			class WaveSpeed : Edit {
 				property = "tts_emission_moduleEmissionSettings_WaveSpeed";
-				displayName = "Wave speed";
-				tooltip = "Speed in m/s wave travels (only applies to map sweep emission)";
+				displayName = "$STR_tts_emission_moduleChangeSettings_waveSpeed";
+				tooltip = "$STR_tts_emission_moduleChangeSettings_waveSpeed_desc";
 				typeName = "NUMBER";
 				defaultValue = "125";
 			};
 			class ShowEmissionOnMap : Checkbox {
 				property = "tts_emission_moduleEmissionSettings_ShowEmissionOnMap";
-				displayName = "Show emission on map";
-				tooltip = "If checked, the emission's position will be displayed on the map";
+				displayName = "$STR_tts_emission_moduleChangeSettings_showEmissionOnMap";
+				tooltip = "$STR_tts_emission_moduleChangeSettings_showEmissionOnMap_desc";
 				defaultValue = "0";
 			};
 			class DisableRain : Checkbox {
 				property = "tts_emission_moduleEmissionSettings_DisableRain";
-				displayName = "Disable rain effects";
-				tooltip = "If checked, rain after the emission finishes will be disabled (tick this if using weather scripts)";
+				displayName = "$STR_tts_emission_moduleChangeSettings_rainEffects";
+				tooltip = "$STR_tts_emission_moduleChangeSettings_rainEffects_desc";
 				defaultValue = "0";
 			};
 			class ModuleDescription: ModuleDescription{};
@@ -149,7 +149,7 @@ class CfgVehicles {
 
 		class ModuleDescription: ModuleDescription
 		{
-			description = "Configures settings for TTS Emission script."; // Short description, will be formatted as structured text
+			description = "$STR_tts_emission_moduleChangeSettings_desc"; // Short description, will be formatted as structured text
 		};
 	};
 
@@ -159,7 +159,7 @@ class CfgVehicles {
 		isDisposable = 1; // 1 if modules is to be disabled once it's activated (i.e., repeated trigger activation won't work)
 		isGlobal = 0; // 0 for server only execution, 1 for global execution, 2 for persistent global execution
 		isTriggerActivated = 1;
-		displayName = "Start Emission";
+		displayName = "$STR_tts_emission_moduleStartEmission_title";
 		icon = "tts_emission\icons\tts_emission.paa"
 		category = "tts_emission_modules";
 		function = "tts_emission_fnc_editor_moduleStartEmission";
@@ -170,7 +170,7 @@ class CfgVehicles {
 
 		class ModuleDescription: ModuleDescription
 		{
-			description = "Starts an emission when all synced triggers are activated."; // Short description, will be formatted as structured text
+			description = "$STR_tts_emission_moduleStartEmission_desc"; // Short description, will be formatted as structured text
 		};
 	};
 

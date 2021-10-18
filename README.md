@@ -1,6 +1,10 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 18/10/2021
+Applied changes from script version:
+- Added stringtable support to allow the script to be translated. If you are willing to help translate the script into another language, contact me in my Discord!
+
 ### 09/10/2021
 - Added compatibility for upcoming AIO mod.
 
