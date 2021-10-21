@@ -1,6 +1,10 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 21/10/2021
+Applied changes from script version:
+- Fixed a typo in `fn_startEmission` that was resetting siren type 'None' back to 'Classic'.
+
 ### 18/10/2021
 Applied changes from script version:
 - Added stringtable support to allow the script to be translated. If you are willing to help translate the script into another language, contact me in my Discord!

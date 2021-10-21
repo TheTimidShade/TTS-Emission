@@ -48,7 +48,7 @@ if (!(tts_emission_emissionType in [0,1])) then {tts_emission_emissionType = 0;}
 if (!(tts_emission_playerEffect in [0,1,2,3,4])) then {tts_emission_playerEffect = 0;};
 if (!(tts_emission_aiEffect in [0,1,2,3,4])) then {tts_emission_aiEffect = 1;};
 if (!(tts_emission_aircraftEffect in [0,1,2])) then {tts_emission_aircraftEffect = 0;};
-if (!(tts_emission_sirenType in [0,1])) then {tts_emission_sirenType = 0;};
+if (!(tts_emission_sirenType in [0,1,2])) then {tts_emission_sirenType = 0;};
 if (!(tts_emission_useSirenObject in [true,false])) then {tts_emission_useSirenObject = false;};
 if (tts_emission_waveSpeed <= 0) then {tts_emission_waveSpeed = 125;};
 if (!(tts_emission_showEmissionOnMap in [true,false])) then {tts_emission_showEmissionOnMap = false;};
