@@ -29,6 +29,7 @@ if (_activated) then {
 	private _sirenType = _module getVariable ["SirenType", 0];
 	private _useSirenObject = _module getVariable ["UsePhysicalSiren", false];
 	private _protectionEquipment = (_module getVariable ["ProtectionEquipment", ""]) splitString ",";
+	private _shelterTypes = (_module getVariable ["ShelterTypes", ""]) splitString ",";
 	private _immuneUnits = (_module getVariable ["ImmuneUnits", ""]) splitString ",";
 	private _waveSpeed = _module getVariable ["WaveSpeed", 125];
 	private _showEmissionOnMap = _module getVariable ["ShowEmissionOnMap", false];
@@ -41,6 +42,7 @@ if (_activated) then {
 	tts_emission_useSirenObject = _useSirenObject;
 	tts_emission_sirenType = _sirenType;
 	tts_emission_protectionEquipment = _protectionEquipment;
+	tts_emission_shelterTypes = _shelterTypes;
 	tts_emission_immuneUnits = _immuneUnits;
 	tts_emission_waveSpeed = _waveSpeed;
 	tts_emission_showEmissionOnMap = _showEmissionOnMap;
@@ -54,6 +56,7 @@ if (_activated) then {
 		"tts_emission_useSirenObject",
 		"tts_emission_sirenType",
 		"tts_emission_protectionEquipment",
+		"tts_emission_shelterTypes",
 		"tts_emission_immuneUnits",
 		"tts_emission_waveSpeed",
 		"tts_emission_showEmissionOnMap",

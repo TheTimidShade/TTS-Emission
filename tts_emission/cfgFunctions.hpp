@@ -9,6 +9,7 @@ class tts_emission
 		class hasProtection {};
 		class isZombie {};
 		class isSafeType {};
+		class isImmune{};
 	};
 	class stages {
 		file = "tts_emission\functions\stages";

@@ -1,6 +1,11 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 22/10/2021
+Applied changes from script version:
+- Added a new setting `tts_emission_shelterTypes` that controls the classes that provide shelter from the emission.
+- Improved setting `tts_emission_immuneUnits`, it can now contain parent classes the same as `tts_emission_shelterTypes`.
+
 ### 21/10/2021
 Applied changes from script version:
 - Fixed a typo in `fn_startEmission` that was resetting siren type 'None' back to 'Classic'.

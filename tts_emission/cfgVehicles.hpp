@@ -118,6 +118,13 @@ class CfgVehicles {
 				typeName = "STRING";
 				defaultValue = """""";
 			};
+			class ShelterTypes : Edit {
+				property = "tts_emission_moduleEmissionSettings_ShelterTypes";
+				displayName = "$STR_tts_emission_moduleChangeSettings_shelterTypes";
+				tooltip = "$STR_tts_emission_moduleChangeSettings_shelterTypes_desc";
+				typeName = "STRING";
+				defaultValue = """Building,Car,Tank,Air,Ship""";
+			};
 			class ImmuneUnits : Edit {
 				property = "tts_emission_moduleEmissionSettings_ImmuneUnits";
 				displayName = "$STR_tts_emission_moduleChangeSettings_immuneUnits";
