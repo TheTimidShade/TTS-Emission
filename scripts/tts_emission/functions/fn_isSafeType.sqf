@@ -17,9 +17,8 @@ params [
 
 if (isNull _obj) exitWith {};
 
-private _safeTypes = ["Building", "Car", "Tank", "Air", "Ship"];
 private _safe = false;
 {
-	if (_this isKindOf _x) exitWith {_safe = true;};
-} forEach _safeTypes;
+	if (_obj isKindOf _x) exitWith {_safe = true;};
+} forEach tts_emission_shelterTypes;
 _safe

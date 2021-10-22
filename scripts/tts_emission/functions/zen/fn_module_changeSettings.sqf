@@ -15,15 +15,17 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 		if (isNil "tts_emission_sirenType") then {tts_emission_sirenType = 0;};
 		if (isNil "tts_emission_useSirenObject") then {tts_emission_useSirenObject = false;};
 		if (isNil "tts_emission_protectionEquipment") then {tts_emission_protectionEquipment = [];};
+		if (isNil "tts_emission_shelterTypes") then {tts_emission_shelterTypes = ["Building", "Car", "Tank", "Air", "Ship"];};
 		if (isNil "tts_emission_immuneUnits") then {tts_emission_immuneUnits = [];};
 		if (isNil "tts_emission_waveSpeed") then {tts_emission_waveSpeed = 125;};
 		if (isNil "tts_emission_showEmissionOnMap") then {tts_emission_showEmissionOnMap = false;};
 		if (isNil "tts_emission_disableRain") then {tts_emission_disableRain = false;};
 
-		private ["_protectionPlaceholder", "_immunePlaceholder"];
+		private ["_protectionPlaceholder", "_shelterTypesPlaceholder", "_immunePlaceholder"];
 		// populate placeholders
 		_protectionPlaceholder = tts_emission_protectionEquipment joinString ",";
 		_immunePlaceholder = tts_emission_immuneUnits joinString ",";
+		_shelterTypesPlaceholder = tts_emission_shelterTypes joinString ",";
 
 		[
 			"STR_tts_emission_moduleChangeSettings_heading", // title
@@ -82,6 +84,14 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 					],
 					true // force default
 				],
+				["EDIT", ["STR_tts_emission_moduleChangeSettings_shelterTypes", "STR_tts_emission_moduleChangeSettings_shelterTypes_desc"],
+					[ // control args
+						_shelterTypesPlaceholder, // default text
+						{}, // sanitise function
+						1 // edit box height (only for multi line)
+					],
+					true // force default
+				],
 				["EDIT", ["STR_tts_emission_moduleChangeSettings_immuneUnits", "STR_tts_emission_moduleChangeSettings_immuneUnits_desc"],
 					[ // control args
 						_immunePlaceholder, // default text
@@ -121,10 +131,11 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 				tts_emission_sirenType = _dialogResult#4;
 				tts_emission_useSirenObject = _dialogResult#5;
 				tts_emission_protectionEquipment = (_dialogResult#6) splitString ",";
-				tts_emission_immuneUnits = (_dialogResult#7) splitString ",";
-				tts_emission_waveSpeed = parseNumber (_dialogResult#8);
-				tts_emission_showEmissionOnMap = _dialogResult#9;
-				tts_emission_disableRain = _dialogResult#10;
+				tts_emission_shelterTypes = (_dialogResult#7) splitString ",";
+				tts_emission_immuneUnits = (_dialogResult#8) splitString ",";
+				tts_emission_waveSpeed = parseNumber (_dialogResult#9);
+				tts_emission_showEmissionOnMap = _dialogResult#10;
+				tts_emission_disableRain = _dialogResult#11;
 
 				{publicVariable _x;} forEach [ // publish settings to all clients
 					"tts_emission_emissionType",
@@ -134,6 +145,7 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 					"tts_emission_sirenType",
 					"tts_emission_useSirenObject",
 					"tts_emission_protectionEquipment",
+					"tts_emission_shelterTypes",
 					"tts_emission_immuneUnits",
 					"tts_emission_waveSpeed",
 					"tts_emission_showEmissionOnMap",

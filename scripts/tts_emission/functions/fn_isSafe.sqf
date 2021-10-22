@@ -17,7 +17,7 @@ params [
 
 if (isNull _unit) exitWith {false};
 if (((getPosASL _unit)#2) <= -2) exitWith {true}; // if unit is more than 2m underwater, they are safe
-if ((typeOf _unit) in tts_emission_immuneUnits || (vehicleVarName _unit) in tts_emission_immuneUnits) exitWith {true};
+if ([_unit] call tts_emission_fnc_isImmune) exitWith {true}; // if the unit is immune they are safe
 
 private _isSafe = false;
 if (isPlayer _unit) then {

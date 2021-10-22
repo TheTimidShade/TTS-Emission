@@ -25,7 +25,7 @@ There are two types of emissions to choose from:
 
 **Fixed Distance** - The emission will start at a fixed distance away from players so all players and units on the map are hit at the same time. Since the emission is fixed to the player, no matter how fast you fly away from the wave it will still hit you, so this can look weird from aircraft. Mainly suited towards player only/infantry/RP missions. (This was v1 before I designed the map sweep version)
 
-To shelter yourself from the emission, you must have a structure or vehicle considered to be shelter above your head within 30m. Objects considered shelter are anything that inherits from the classes 'Building', 'Car', 'Tank', 'Air' or 'Ship'. If you notice instances where you think you should have been protected but weren't, feel free to report them to me in my via my [Discord](https://discord.com/invite/8Y2ENWQMpK) and I will look into adjusting these classes if necessary.
+To shelter yourself from the emission, you must have a structure or vehicle considered to be shelter above your head within 30m. By default, objects considered shelter are anything that inherits from the classes 'Building', 'Car', 'Tank', 'Air' or 'Ship'. These classes can be adjusted in the settings if desired.
 
 ___
 
@@ -81,6 +81,7 @@ tts_emission_aircraftEffect = 0; // Lightning bolt
 tts_emission_sirenType = 0; // Classic
 tts_emission_useSirenObject = false;
 tts_emission_protectionEquipment = []; // Nothing can protect you outside of shelter
+tts_emission_shelterTypes = ["Building", "Car", "Tank", "Air", "Ship"];
 tts_emission_immuneUnits = []; // No units are immune to the emission
 tts_emission_waveSpeed = 125;
 tts_emission_showEmissionOnMap = false;
@@ -122,12 +123,18 @@ If this is true, the script will try to find an object in the mission with the v
 **tts_emission_protectionEquipment**  
 An array of equipment classnames that player and AI units can equip to protect themselves from the emission outside of shelter. The unit only needs to be wearing one of the items in the array to be considered protected. Valid equipment can be headgear, facewear, NVGs, uniforms, vests or backpacks. Default value is an empty array.
 
+**tts_emission_shelterTypes**  
+An array that contains classnames of objects that provide shelter from emissions. Anything that inherits from these classes will also provide shelter. Default value is `["Building", "Car", "Tank", "Air", "Ship"]`.
+
 **tts_emission_immuneUnits**  
-Similar to `tts_emission_protectionEquipment`, this is an array containing unit types and variable names that are immune to the emission. 'Unit types' means exact classnames, if you put 'Man' in the array it will not make all child types immune.  
+Similar to `tts_emission_shelterTypes`, this is an array containing unit types and variable names that are immune to the emission. Like `tts_emission_shelterTypes`, any units that inherit from the classes in this array are also considered immune. Default value is an empty array.
 e.g.  
 ```sqf
-// NATO riflemen and the unit with variable name 'immune_1' will be immune
-tts_emission_immuneUnits = ["B_Soldier_F", "immune_1"];
+// Protected units:
+// - NATO rifleman
+// - Unit with variable name 'immune_1'
+// - Any unit that inherits from the 'B_Soldier_base_F' class
+tts_emission_immuneUnits = ["B_Soldier_F", "immune_1", "B_Soldier_base_F"];
 ```
 
 **tts_emission_waveSpeed**  
@@ -168,7 +175,7 @@ Example:
 ```
 
 <br/>**tts_emission_fnc_isSafe**  
-Tests if the given unit is 'sheltered' from the emission. 'Safe shelter objects' are considered to be anything that inherits from the classes 'Building', 'Car', 'Tank', 'Air' or 'Ship'.  
+Tests if the given unit is 'sheltered' from the emission. 'Safe shelter objects' are considered to be anything that inherits from the classes defined in `tts_emission_shelterTypes`. By default these are 'Building', 'Car', 'Tank', 'Air' or 'Ship'.  
 Players are considered 'sheltered' if one or more of the following conditions are met:
 - There is a safe shelter object over their head within 30m.
 - They are more than 2m underwater.
@@ -187,6 +194,19 @@ Returns:
 Example:
 ```sqf
 private _isSafe = [_unit] call tts_emission_fnc_isSafe;
+```
+
+<br/>**tts_emission_fnc_isImmune**  
+Tests if the given unit is immune from the emission. Runs a check of the unit's variable name and type against the `tts_emission_immuneUnits` array then checks if they inherit from any classes in the array.
+```
+Parameters:  
+  0: OBJECT - Unit to check
+Returns:  
+  BOOL - True if unit is immune from the emission
+```
+Example:
+```sqf
+private _isImmune = [_unit] call tts_emission_fnc_isImmune;
 ```
 
 <br/>**tts_emission_fnc_isZombie**  
@@ -220,6 +240,10 @@ ___
 
 ## Changelog
 Read below for complete changelog history.
+
+### 22/10/2021
+- Added a new setting `tts_emission_shelterTypes` that controls the classes that provide shelter from the emission.
+- Improved setting `tts_emission_immuneUnits`, it can now contain parent classes the same as `tts_emission_shelterTypes`.
 
 ### 21/10/2021
 - Fixed a typo in `fn_startEmission` that was resetting siren type 'None' back to 'Classic'.

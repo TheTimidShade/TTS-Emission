@@ -38,6 +38,7 @@ if (isNil "tts_emission_aircraftEffect") then {tts_emission_aircraftEffect = 0;}
 if (isNil "tts_emission_sirenType") then {tts_emission_sirenType = 0;};
 if (isNil "tts_emission_useSirenObject") then {tts_emission_useSirenObject = false;};
 if (isNil "tts_emission_protectionEquipment") then {tts_emission_protectionEquipment = [];};
+if (isNil "tts_emission_shelterTypes") then {tts_emission_shelterTypes = ["Building", "Car", "Tank", "Air", "Ship"];};
 if (isNil "tts_emission_immuneUnits") then {tts_emission_immuneUnits = [];};
 if (isNil "tts_emission_waveSpeed") then {tts_emission_waveSpeed = 125;};
 if (isNil "tts_emission_showEmissionOnMap") then {tts_emission_showEmissionOnMap = false;};
@@ -63,6 +64,7 @@ if (!(tts_emission_disableRain in [true,false])) then {tts_emission_disableRain 
 	"tts_emission_sirenType",
 	"tts_emission_useSirenObject",
 	"tts_emission_protectionEquipment",
+	"tts_emission_shelterTypes",
 	"tts_emission_immuneUnits",
 	"tts_emission_waveSpeed",
 	"tts_emission_showEmissionOnMap",

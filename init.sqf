@@ -5,6 +5,7 @@ tts_emission_aircraftEffect = 0;
 tts_emission_useSirenObject = true;
 tts_emission_sirenType = 1;
 tts_emission_protectionEquipment = ["G_AirPurifyingRespirator_02_black_F", "U_O_R_Gorka_01_F"];
+tts_emission_shelterTypes = ["Building", "Car", "Tank", "Air", "Ship"];
 tts_emission_immuneUnits = ["C_man_p_beggar_F"];
 tts_emission_waveSpeed = 125;
 tts_emission_showEmissionOnMap = true;

@@ -154,6 +154,16 @@
                     <English>Comma seperated classnames of headgear, facewear, NVGs, uniforms, vests or bags that units can wear to survive emissions outside of shelter</English>
                 </Key>
             </Container>
+            <Container name="Shelter types param">
+                <Key ID="STR_tts_emission_moduleChangeSettings_shelterTypes">
+                    <Original>Shelter types</Original>
+                    <English>Shelter types</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_shelterTypes_desc">
+                    <Original>Comma seperated classnames of structures/vehicles that protect from the emission\nAll objects that inherit from these classes will also provide protection\nDefaults are 'Building', 'Car', 'Tank', 'Air', 'Ship'.</Original>
+                    <English>Comma seperated classnames of structures/vehicles that protect from the emission\nAll objects that inherit from these classes will also provide protection\nDefaults are 'Building', 'Car', 'Tank', 'Air', 'Ship'.</English>
+                </Key>
+            </Container>
             <Container name="Immune units param">
                 <Key ID="STR_tts_emission_moduleChangeSettings_immuneUnits">
                     <Original>Immune units</Original>
