@@ -1,6 +1,9 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 07/11/2021
+- Fixed default settings for modules having incorrect types. Modules should not cause errors when using default settings anymore.
+
 ### 22/10/2021
 Applied changes from script version:
 - Added a new setting `tts_emission_shelterTypes` that controls the classes that provide shelter from the emission.

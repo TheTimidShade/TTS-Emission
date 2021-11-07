@@ -109,7 +109,8 @@ class CfgVehicles {
 				property = "tts_emission_moduleEmissionSettings_UsePhysicalSiren";
 				displayName = "$STR_tts_emission_moduleChangeSettings_usePhysicalSiren";
 				tooltip = "$STR_tts_emission_moduleChangeSettings_usePhysicalSiren_desc";
-				defaultValue = "0";
+				typeName = "BOOL";
+				defaultValue = "false";
 			};
 			class ProtectionEquipment : Edit {
 				property = "tts_emission_moduleEmissionSettings_ProtectionEquipment";
@@ -143,13 +144,15 @@ class CfgVehicles {
 				property = "tts_emission_moduleEmissionSettings_ShowEmissionOnMap";
 				displayName = "$STR_tts_emission_moduleChangeSettings_showEmissionOnMap";
 				tooltip = "$STR_tts_emission_moduleChangeSettings_showEmissionOnMap_desc";
-				defaultValue = "0";
+				typeName = "BOOL";
+				defaultValue = "false";
 			};
 			class DisableRain : Checkbox {
 				property = "tts_emission_moduleEmissionSettings_DisableRain";
 				displayName = "$STR_tts_emission_moduleChangeSettings_rainEffects";
 				tooltip = "$STR_tts_emission_moduleChangeSettings_rainEffects_desc";
-				defaultValue = "0";
+				typeName = "BOOL";
+				defaultValue = "false";
 			};
 			class ModuleDescription: ModuleDescription{};
 		};
