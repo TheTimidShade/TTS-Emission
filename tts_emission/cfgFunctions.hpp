@@ -2,6 +2,7 @@ class tts_emission
 {
 	class emission {
 		file = "tts_emission\functions";
+		class init { postInit = 1; };
 		class startEmission {};
 		class isSafe {};
 		class damagePlayer {};
@@ -31,13 +32,13 @@ class tts_emission
 	};
 	class zen {
 		file = "tts_emission\functions\zen";
-		class initCustomModules {preInit = 1;};
-		class module_changeSettings {};
-		class module_startEmission {};
+		class initCustomModules {};
+		class zen_moduleChangeSettings {};
+		class zen_moduleStartEmission {};
 	}
 	class modules {
 		file = "tts_emission\functions\modules";
-		class editor_moduleEmissionSettings {};
-		class editor_moduleStartEmission {};
+		class moduleEmissionSettings {};
+		class moduleStartEmission {};
 	}
 };

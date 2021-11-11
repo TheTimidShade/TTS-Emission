@@ -1,6 +1,12 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 11/11/2021
+- Cleaned up ZEN modules to be consistent with other TTS scripts.
+- Doubled the width of the emission wave particle effect.
+- Tweaked the emission particle creation to be tied to the camera's distance to the wave rather than the player character's distance to the wave. This should allow the emission wave to be visible from Zeus and Spectator.
+- Redid support for TTS Effects AIO.
+
 ### 07/11/2021
 - Fixed default settings for modules having incorrect types. Modules should not cause errors when using default settings anymore.
 

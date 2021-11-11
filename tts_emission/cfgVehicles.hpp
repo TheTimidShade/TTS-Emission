@@ -34,7 +34,7 @@ class CfgVehicles {
 		displayName = "$STR_tts_emission_moduleChangeSettings_title_alt";
 		icon = "tts_emission\icons\tts_settings.paa";
 		category = "tts_emission_modules";
-		function = "tts_emission_fnc_editor_moduleEmissionSettings";
+		function = "tts_emission_fnc_moduleEmissionSettings";
 		
 		class Attributes : AttributesBase {
 			class EmissionType : Combo {
@@ -172,7 +172,7 @@ class CfgVehicles {
 		displayName = "$STR_tts_emission_moduleStartEmission_title";
 		icon = "tts_emission\icons\tts_emission.paa"
 		category = "tts_emission_modules";
-		function = "tts_emission_fnc_editor_moduleStartEmission";
+		function = "tts_emission_fnc_moduleStartEmission";
 		
 		class Attributes : AttributesBase {
 			class ModuleDescription: ModuleDescription{};

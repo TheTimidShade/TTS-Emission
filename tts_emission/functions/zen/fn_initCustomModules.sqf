@@ -11,13 +11,7 @@
 		NONE
 */
 
-if (isClass(configFile >> "CfgPatches" >> "tts_effects_aio") && {missionNamespace getVariable ["tts_effects_aio_disable_emission", false]}) exitWith {};
+if (!isClass (configFile >> "CfgPatches" >> "zen_main")) exitWith {};
 
-[] spawn {
-
-waitUntil {sleep 1; player == player && !isNull getAssignedCuratorLogic player};
-
-[] call tts_emission_fnc_module_changeSettings;
-[] call tts_emission_fnc_module_startEmission;
-
-};
+[] call tts_emission_fnc_zen_moduleChangeSettings;
+[] call tts_emission_fnc_zen_moduleStartEmission;
