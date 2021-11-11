@@ -58,7 +58,7 @@ while {!tts_emission_wave_finished} do {
 			private _offsetY = ((random 12) - 24);
 			private _sizeMod = random 40;
 			
-			private _dropPos = [_wavePos#0 + ((_dst-10)*_particleSpacing) + ((random _particleSpacing) - _particleSpacing/2), _wavePos#1, random 10];
+			private _dropPos = [_wavePos#0 + ((_dst-20)*_particleSpacing) + ((random _particleSpacing) - _particleSpacing/2), _wavePos#1, random 10];
 			if (getTerrainHeightASL _dropPos <= 0) then {
 				_dropper setPosASL _dropPos;
 			} else {
