@@ -241,6 +241,11 @@ ___
 ## Changelog
 Read below for complete changelog history.
 
+### 11/11/2021
+- Cleaned up ZEN functions to be consistent with other TTS scripts.
+- Doubled the width of the emission wave particle effect.
+- Tweaked the emission particle creation to be tied to the camera's distance to the wave rather than the player character's distance to the wave. This should allow the emission wave to be visible from Zeus and Spectator.
+
 ### 22/10/2021
 - Added a new setting `tts_emission_shelterTypes` that controls the classes that provide shelter from the emission.
 - Improved setting `tts_emission_immuneUnits`, it can now contain parent classes the same as `tts_emission_shelterTypes`.

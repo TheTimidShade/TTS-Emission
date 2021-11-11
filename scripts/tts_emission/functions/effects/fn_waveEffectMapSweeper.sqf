@@ -12,9 +12,6 @@
 */
 
 if (!hasInterface) exitWith {}; // don't run effects on server or hc
-
-private _particleSpacing = 80;
-
 if (isNil "tts_emission_wave_yPos") exitWith {systemChat "TTS Emission: Wave y pos undefined"};
 
 private _wavePos = [(getPos player)#0, tts_emission_wave_yPos]; 
@@ -46,6 +43,8 @@ _waveObject spawn { // handle sound
 	};
 };
 
+private _particleSpacing = 80;
+
 // while the wave is active, update position using distance passed by server
 while {!tts_emission_wave_finished} do {
 	_wavePos = getPos player;
@@ -53,8 +52,8 @@ while {!tts_emission_wave_finished} do {
 	
 	_waveObject setPos _wavePos;
 
-	if (player distance2D _waveObject < 3000) then { // only drop particles when wave is within 3km
-		for "_dst" from 0 to 20 do { // spawn single wave of particles
+	if ((positionCameraToWorld [0,0,0]) distance2D _waveObject < 3000) then { // only drop particles when wave is within 3km of camera
+		for "_dst" from 0 to 40 do { // spawn single wave of particles
 			private _offsetX = ((random 3) - 6);
 			private _offsetY = ((random 12) - 24);
 			private _sizeMod = random 40;
