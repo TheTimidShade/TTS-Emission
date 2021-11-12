@@ -21,7 +21,7 @@ ___
 
 There are two types of emissions to choose from:
 
-**Map Sweep** - The emission will sweep the map from North to South, so the time at which units are hit by the wave is dynamic depending on their position on the map. The 'Wave Speed' and 'Show Emission on Map' parameters only apply to this emission type.
+**Map Sweep** - The emission will sweep the map from one side to the other, so the time at which units are hit by the wave is dynamic depending on their position on the map. The 'Wave Speed', 'Show Emission on Map' and 'Approach Direction' parameters only apply to this emission type.
 
 **Fixed Distance** - The emission will start at a fixed distance away from players so all players and units on the map are hit at the same time. Since the emission is fixed to the player, no matter how fast you fly away from the wave it will still hit you, so this can look weird from aircraft. Mainly suited towards player only/infantry/RP missions. (This was v1 before I designed the map sweep version)
 
@@ -84,6 +84,7 @@ tts_emission_protectionEquipment = []; // Nothing can protect you outside of she
 tts_emission_shelterTypes = ["Building", "Car", "Tank", "Air", "Ship"];
 tts_emission_immuneUnits = []; // No units are immune to the emission
 tts_emission_waveSpeed = 125;
+tts_emission_approachDirection = "N"; // Can be 'N', 'E', 'S' or 'W'
 tts_emission_showEmissionOnMap = false;
 tts_emission_disableRain = false;
 ```
@@ -139,6 +140,13 @@ tts_emission_immuneUnits = ["B_Soldier_F", "immune_1", "B_Soldier_base_F"];
 
 **tts_emission_waveSpeed**  
 The speed the wave moves at in m/s. This setting only applies when using the 'Map Sweep' emission type. Must be > 0. The kill trigger for the map sweep wave is 80m wide and updates every 0.1 seconds, so setting this higher than 800m/s may cause units to be missed by the trigger. Default value is 125.
+
+**tts_emission_approachDirection**  
+The direction the 'Map Sweep' emission aproaches from. Can be 'N', 'E', 'S', or 'W'. Default value is 'N'.
+N = North (Emission moves North-South)
+E = East (Emission moves East-West)
+S = South (Emission moves South-North)
+W = West (Emission moves West-East)
 
 **tts_emission_showEmissionOnMap**  
 If this is true, the emission's progress across the map will be shown via map markers. This setting only applies to the 'Map Sweep' emission type. Default value is false.
@@ -240,6 +248,10 @@ ___
 
 ## Changelog
 Read below for complete changelog history.
+
+### 12/11/2021
+- Added a new setting 'Approach direction' which determines the direction the map sweep emission will approach from. You can now choose 'North', 'South', 'East' or 'West'. (Suggested by cpt_bassbeard)
+- Cleaned up default settings in `init.sqf`.
 
 ### 11/11/2021
 - Cleaned up ZEN functions to be consistent with other TTS scripts.

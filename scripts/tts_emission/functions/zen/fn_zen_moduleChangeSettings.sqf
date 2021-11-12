@@ -16,6 +16,7 @@
 	if (isNil "tts_emission_shelterTypes") then {tts_emission_shelterTypes = ["Building", "Car", "Tank", "Air", "Ship"];};
 	if (isNil "tts_emission_immuneUnits") then {tts_emission_immuneUnits = [];};
 	if (isNil "tts_emission_waveSpeed") then {tts_emission_waveSpeed = 125;};
+	if (isNil "tts_emission_approachDirection") then {tts_emission_approachDirection = "N";};
 	if (isNil "tts_emission_showEmissionOnMap") then {tts_emission_showEmissionOnMap = false;};
 	if (isNil "tts_emission_disableRain") then {tts_emission_disableRain = false;};
 
@@ -106,6 +107,14 @@
 				],
 				true // force default
 			],
+			["COMBO", ["STR_tts_emission_moduleChangeSettings_approachDirection", "STR_tts_emission_moduleChangeSettings_approachDirection_desc"],
+				[ // control args
+					[0, 1, 2, 3], // return values
+					["STR_tts_emission_moduleChangeSettings_approachDirection_north", "STR_tts_emission_moduleChangeSettings_approachDirection_east", "STR_tts_emission_moduleChangeSettings_approachDirection_south", "STR_tts_emission_moduleChangeSettings_approachDirection_west"], // labels
+					(["N", "E", "S", "W"] find tts_emission_approachDirection)
+				],
+				true // force default
+			],
 			["CHECKBOX", ["STR_tts_emission_moduleChangeSettings_showEmissionOnMap", "STR_tts_emission_moduleChangeSettings_showEmissionOnMap_desc"],
 				[ // control args
 					tts_emission_showEmissionOnMap // default state
@@ -132,8 +141,9 @@
 			tts_emission_shelterTypes = (_dialogResult#7) splitString ",";
 			tts_emission_immuneUnits = (_dialogResult#8) splitString ",";
 			tts_emission_waveSpeed = parseNumber (_dialogResult#9);
-			tts_emission_showEmissionOnMap = _dialogResult#10;
-			tts_emission_disableRain = _dialogResult#11;
+			tts_emission_approachDirection = ["N", "E", "S", "W"]#(_dialogResult#10);
+			tts_emission_showEmissionOnMap = _dialogResult#11;
+			tts_emission_disableRain = _dialogResult#12;
 
 			{publicVariable _x;} forEach [ // publish settings to all clients
 				"tts_emission_emissionType",
@@ -146,6 +156,7 @@
 				"tts_emission_shelterTypes",
 				"tts_emission_immuneUnits",
 				"tts_emission_waveSpeed",
+				"tts_emission_approachDirection",
 				"tts_emission_showEmissionOnMap",
 				"tts_emission_disableRain"
 			];
