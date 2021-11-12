@@ -140,6 +140,20 @@ class CfgVehicles {
 				typeName = "NUMBER";
 				defaultValue = "125";
 			};
+			class ApproachDirection : Combo {
+				property = "tts_emission_moduleEmissionSettings_ApproachDirection";
+				displayName = "$STR_tts_emission_moduleChangeSettings_approachDirection";
+				tooltip = "$STR_tts_emission_moduleChangeSettings_approachDirection_desc";
+				typeName = "STRING";
+				defaultValue = """N""";
+				class Values
+				{
+					class North {name = "$STR_tts_emission_moduleChangeSettings_approachDirection_north"; value = "N";}; // Listbox item
+					class East {name = "$STR_tts_emission_moduleChangeSettings_approachDirection_east"; value = "E";};
+					class South {name = "$STR_tts_emission_moduleChangeSettings_approachDirection_south"; value = "S";};
+					class West {name = "$STR_tts_emission_moduleChangeSettings_approachDirection_west"; value = "W";};
+				};
+			};
 			class ShowEmissionOnMap : Checkbox {
 				property = "tts_emission_moduleEmissionSettings_ShowEmissionOnMap";
 				displayName = "$STR_tts_emission_moduleChangeSettings_showEmissionOnMap";

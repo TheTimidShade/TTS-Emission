@@ -184,6 +184,32 @@
                     <English>Speed in m/s wave travels (only applies to map sweep emission)</English>
                 </Key>
             </Container>
+            <Container name="Approach direction param">
+                <Key ID="STR_tts_emission_moduleChangeSettings_approachDirection">
+                    <Original>Approach direction</Original>
+                    <English>Approach direction</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_approachDirection_desc">
+                    <Original>The direction the emission will come from (only applies to map sweep emission)</Original>
+                    <English>The direction the emission will come from (only applies to map sweep emission)</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_approachDirection_north">
+                    <Original>North</Original>
+                    <English>North</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_approachDirection_east">
+                    <Original>East</Original>
+                    <English>East</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_approachDirection_south">
+                    <Original>South</Original>
+                    <English>South</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_approachDirection_west">
+                    <Original>West</Original>
+                    <English>West</English>
+                </Key>
+            </Container>
             <Container name="Show emission on map param">
                 <Key ID="STR_tts_emission_moduleChangeSettings_showEmissionOnMap">
                     <Original>Show emission on map</Original>

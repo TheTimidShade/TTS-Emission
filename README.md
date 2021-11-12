@@ -1,10 +1,17 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 12/11/2021
+Applied changes from script version:
+- Added a new setting 'Approach direction' which determines the direction the map sweep emission will approach from. You can now choose 'North', 'South', 'East' or 'West'. (Suggested by cpt_bassbeard)
+
 ### 11/11/2021
+Applied changes from script version:
 - Cleaned up ZEN functions to be consistent with other TTS scripts.
 - Doubled the width of the emission wave particle effect.
 - Tweaked the emission particle creation to be tied to the camera's distance to the wave rather than the player character's distance to the wave. This should allow the emission wave to be visible from Zeus and Spectator.
+
+Mod version specific changes:
 - Redid support for TTS Effects AIO.
 
 ### 07/11/2021
