@@ -193,7 +193,9 @@ Example:
 ```sqf
 // start random emissions for 2hrs then stop
 [30, 45, 125, 300, false] call tts_emission_fnc_startRandomEmissions;
+
 sleep 120*60;
+
 tts_emission_randomEmissions = false;
 publicVariable "tts_emission_randomEmissions";
 ```
