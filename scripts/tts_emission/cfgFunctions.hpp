@@ -11,6 +11,7 @@ class tts_emission
 		class isZombie {};
 		class isSafeType {};
 		class isImmune {};
+		class startRandomEmissions {};
 	};
 	class stages {
 		file = "scripts\tts_emission\functions\stages";
@@ -35,5 +36,6 @@ class tts_emission
 		class initCustomModules {};
 		class zen_moduleChangeSettings {};
 		class zen_moduleStartEmission {};
+		class zen_moduleStartRandomEmissions {};
 	}
 };

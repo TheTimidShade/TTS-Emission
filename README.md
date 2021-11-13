@@ -250,6 +250,10 @@ ___
 Read below for complete changelog history.
 
 ### 12/11/2021
+- Added a new function `fn_startRandomEmissions` which can be used to create emissions at random intervals.
+- Added a new ZEN module 'Start Random Emissions' which can be used to start and stop the new random emissions function.
+
+### 12/11/2021
 - Added a new setting 'Approach direction' which determines the direction the map sweep emission will approach from. You can now choose 'North', 'South', 'East' or 'West'. (Suggested by cpt_bassbeard)
 - Cleaned up default settings in `init.sqf`.
 

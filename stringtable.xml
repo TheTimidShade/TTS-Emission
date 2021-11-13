@@ -257,5 +257,65 @@
 				<English>An emission is approaching!</English>
 			</Key>
         </Container>
+        <Container name="Start random emissions module">	
+            <Key ID="STR_tts_emission_moduleStartRandomEmissions_title">
+				<Original>Start Random Emissions</Original>
+				<English>Start Random Emissions</English>
+			</Key>
+            <Key ID="STR_tts_emission_moduleStartRandomEmissions_desc">
+				<Original>This module will start random emissions during the mission until the 'tts_emission_randomEmissions' variable is set to false.</Original>
+				<English>This module will start random emissions during the mission until the 'tts_emission_randomEmissions' variable is set to false.</English>
+			</Key>
+            <Container name="Min delay param">
+                <Key ID="STR_tts_emission_moduleStartRandomEmissions_minDelay">
+                    <Original>Minimum delay</Original>
+                    <English>Minimum delay</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleStartRandomEmissions_minDelay_desc">
+                    <Original>Minimum number of seconds between one emission ending and the next one starting</Original>
+                    <English>Minimum number of seconds between one emission ending and the next one starting</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleStartRandomEmissions_maxDelay">
+                    <Original>Maximum delay</Original>
+                    <English>Maximum delay</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleStartRandomEmissions_maxDelay_desc">
+                    <Original>Maximum number of seconds between one emission ending and the next one starting</Original>
+                    <English>Maximum number of seconds between one emission ending and the next one starting</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleStartRandomEmissions_minSpeed">
+                    <Original>Minimum speed</Original>
+                    <English>Minimum speed</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleStartRandomEmissions_minSpeed_desc">
+                    <Original>Minimum speed of random emissions in m/s</Original>
+                    <English>Minimum speed of random emissions in m/s</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleStartRandomEmissions_maxSpeed">
+                    <Original>Maximum speed</Original>
+                    <English>Maximum speed</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleStartRandomEmissions_maxSpeed_desc">
+                    <Original>Maximum speed of random emissions in m/s</Original>
+                    <English>Maximum speed of random emissions in m/s</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleStartRandomEmissions_randomiseDirection">
+                    <Original>Randomise direction</Original>
+                    <English>Randomise direction</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleStartRandomEmissions_randomiseDirection_desc">
+                    <Original>If enabled, a random approach direction will be selected for each emission</Original>
+                    <English>If enabled, a random approach direction will be selected for each emission</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleStartRandomEmissions_stopRandomEmissions">
+                    <Original>Stop random emissions</Original>
+                    <English>Stop random emissions</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleStartRandomEmissions_stopRandomEmissions_desc">
+                    <Original>If this is checked, instead of starting random emissions the module will stop the random emissions function if it is running\nThe other parameters will not take effect if this parameter is checked</Original>
+                    <English>If this is checked, instead of starting random emissions the module will stop the random emissions function if it is running\nThe other parameters will not take effect if this parameter is checked</English>
+                </Key>
+            </Container>
+        </Container>
 	</Package>
 </Project>
