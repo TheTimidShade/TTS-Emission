@@ -3,7 +3,7 @@ Read below for complete changelog history.
 
 ### 13/11/2021
 Applied changes from script version:
-- Added a new function `fn_startRandomEmissions` which can be used to create emissions at random intervals.
+- Added a new function `fn_startRandomEmissions` which can be used to create emissions at random intervals. (Suggested by Apocalypsis)
 - Added a new ZEN module 'Start Random Emissions' which can be used to start and stop the new random emissions function.
 
 Mod version specific changes:
