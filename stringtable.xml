@@ -272,16 +272,16 @@
                     <English>Minimum delay</English>
                 </Key>
                 <Key ID="STR_tts_emission_moduleStartRandomEmissions_minDelay_desc">
-                    <Original>Minimum number of seconds between one emission ending and the next one starting</Original>
-                    <English>Minimum number of seconds between one emission ending and the next one starting</English>
+                    <Original>Minimum number of minutes between one emission ending and the next one starting</Original>
+                    <English>Minimum number of minutes between one emission ending and the next one starting</English>
                 </Key>
                 <Key ID="STR_tts_emission_moduleStartRandomEmissions_maxDelay">
                     <Original>Maximum delay</Original>
                     <English>Maximum delay</English>
                 </Key>
                 <Key ID="STR_tts_emission_moduleStartRandomEmissions_maxDelay_desc">
-                    <Original>Maximum number of seconds between one emission ending and the next one starting</Original>
-                    <English>Maximum number of seconds between one emission ending and the next one starting</English>
+                    <Original>Maximum number of minutes between one emission ending and the next one starting</Original>
+                    <English>Maximum number of minutes between one emission ending and the next one starting</English>
                 </Key>
                 <Key ID="STR_tts_emission_moduleStartRandomEmissions_minSpeed">
                     <Original>Minimum speed</Original>

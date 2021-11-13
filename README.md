@@ -162,12 +162,41 @@ Trigger an emission:
 // put in a script or trigger 'On Activation' box
 [] spawn tts_emission_fnc_startEmission;
 ```
-*NOTE:* `tts_emission_fnc_startEmission` needs to be executed on the server and will not do anything if it isn't. If you're using a trigger that isn't 'Server Only', you don't need to worry about this.
+*NOTE:* `tts_emission_fnc_startEmission` needs to be executed on the server and will not do anything if it isn't. If you're using a trigger you probably don't need to worry about this.
+
+Start random emissions every 30-45 minutes with wave speed between 125-300m/s:
+```sqf
+// put in a script or trigger 'On Activation' box or init.sqf
+// last parameter will randomise approach direction when true
+[30, 45, 125, 300, true] spawn tts_emission_fnc_startRandomEmissions;
+```
 
 ___
 
 ### **OTHER FUNCTIONS:**  
 *NOTE:* Be careful when using these functions, incorrect use may cause strange behaviour! These are used internally by the scripts/modules but you can use them yourself if you want to.
+
+**tts_emission_fnc_startRandomEmissions**  
+Will start emissions randomly throughout the emission until the variable `tts_emission_randomEmissions` is set to false. This needs to be executed on the server and will not do anything if it is not.
+
+```
+Parameters:  
+  0: NUMBER (OPTIONAL) - Minimum number of minutes after an emission a new one can start. Default: 30m
+  1: NUMBER (OPTIONAL) - Maximum number of minutes after an emission a new one can start. Default: 45m
+  2: NUMBER (OPTIONAL) - Minimum speed of the emission wave in m/s. Default: 125m/s
+  3: NUMBER (OPTIONAL) - Maximum speed of the emission wave in m/s. Default: 125m/s
+  4: BOOL (OPTIONAL) - If true, a random approach direction will be selected for each emission. Default: false
+Returns:  
+  NOTHING
+```
+Example:
+```sqf
+// start random emissions for 2hrs then stop
+[30, 45, 125, 300, false] call tts_emission_fnc_startRandomEmissions;
+sleep 120*60;
+tts_emission_randomEmissions = false;
+publicVariable "tts_emission_randomEmissions";
+```
 
 **tts_emission_fnc_hasProtection**  
 Used to check if the given unit is wearing protection equipment defined in `tts_emission_protectionEquipment`.
