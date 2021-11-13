@@ -198,4 +198,60 @@ class CfgVehicles {
 		};
 	};
 
+	class tts_emission_moduleStartRandomEmissions : tts_emission_module {
+		scope = 2;
+		scopeCurator = 0; // module is not available in Zeus
+		isDisposable = 1; // 1 if modules is to be disabled once it's activated (i.e., repeated trigger activation won't work)
+		isGlobal = 0; // 0 for server only execution, 1 for global execution, 2 for persistent global execution
+		isTriggerActivated = 1;
+		displayName = "$STR_tts_emission_moduleStartRandomEmissions_title";
+		icon = "tts_emission\icons\random_icon.paa"
+		category = "tts_emission_modules";
+		function = "tts_emission_fnc_moduleStartRandomEmissions";
+		
+		class Attributes : AttributesBase {
+			class MinDelay : Edit {
+				property = "tts_emission_moduleStartRandomEmissions_MinDelay";
+				displayName = "$STR_tts_emission_moduleStartRandomEmissions_minDelay";
+				tooltip = "$STR_tts_emission_moduleStartRandomEmissions_minDelay_desc";
+				typeName = "NUMBER";
+				defaultValue = "30";
+			};
+			class MaxDelay : Edit {
+				property = "tts_emission_moduleStartRandomEmissions_MaxDelay";
+				displayName = "$STR_tts_emission_moduleStartRandomEmissions_maxDelay";
+				tooltip = "$STR_tts_emission_moduleStartRandomEmissions_maxDelay_desc";
+				typeName = "NUMBER";
+				defaultValue = "45";
+			};
+			class MinSpeed : Edit {
+				property = "tts_emission_moduleStartRandomEmissions_MinSpeed";
+				displayName = "$STR_tts_emission_moduleStartRandomEmissions_minSpeed";
+				tooltip = "$STR_tts_emission_moduleStartRandomEmissions_minSpeed_desc";
+				typeName = "NUMBER";
+				defaultValue = "125";
+			};
+			class MaxSpeed : Edit {
+				property = "tts_emission_moduleStartRandomEmissions_MaxSpeed";
+				displayName = "$STR_tts_emission_moduleStartRandomEmissions_maxSpeed";
+				tooltip = "$STR_tts_emission_moduleStartRandomEmissions_maxSpeed_desc";
+				typeName = "NUMBER";
+				defaultValue = "125";
+			};
+			class RandomiseDirection : Checkbox {
+				property = "tts_emission_moduleStartRandomEmissions_RandomiseDirection";
+				displayName = "$STR_tts_emission_moduleStartRandomEmissions_randomiseDirection";
+				tooltip = "$STR_tts_emission_moduleStartRandomEmissions_randomiseDirection_desc";
+				typeName = "BOOL";
+				defaultValue = "false";
+			};
+			class ModuleDescription: ModuleDescription{};
+		};
+
+		class ModuleDescription: ModuleDescription
+		{
+			description = "$STR_tts_emission_moduleStartRandomEmissions_desc"; // Short description, will be formatted as structured text
+		};
+	};
+
 }

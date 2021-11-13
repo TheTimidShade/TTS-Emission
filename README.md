@@ -1,6 +1,14 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 13/11/2021
+Applied changes from script version:
+- Added a new function `fn_startRandomEmissions` which can be used to create emissions at random intervals.
+- Added a new ZEN module 'Start Random Emissions' which can be used to start and stop the new random emissions function.
+
+Mod version specific changes:
+- Added 'Start Random Emissions' editor module.
+
 ### 12/11/2021
 Applied changes from script version:
 - Added a new setting 'Approach direction' which determines the direction the map sweep emission will approach from. You can now choose 'North', 'South', 'East' or 'West'. (Suggested by cpt_bassbeard)
