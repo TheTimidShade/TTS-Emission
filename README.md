@@ -47,6 +47,9 @@ ___
 - English
 - Korean (Translation by Taru)
 
+### **Credits:**
+- Players of the [Task Force Dingo](taskforcedingo.com) community who helped bulk test the script during a weekly mission night.
+
 ___
 
 
