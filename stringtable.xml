@@ -4,18 +4,22 @@
         <Key ID="STR_tts_emission_default">
             <Original>Default</Original>
             <English>Default</English>
+            <Korean>기본</Korean>
         </Key>
         <Key ID="STR_tts_emission_true">
             <Original>True</Original>
             <English>True</English>
+            <Korean>활성화</Korean>
         </Key>
         <Key ID="STR_tts_emission_false">
             <Original>False</Original>
             <English>False</English>
+            <Korean>비활성화</Korean>
         </Key>
         <Key ID="STR_tts_emission_none">
             <Original>None</Original>
             <English>None</English>
+            <Korean>없음</Korean>
         </Key>
     </Package>
     <Package name="Modules">
@@ -23,211 +27,257 @@
             <Key ID="STR_tts_emission_moduleChangeSettings_title">
 				<Original>Change Settings</Original>
 				<English>Change Settings</English>
+                <Korean>설정 변경</Korean>
 			</Key>
             <Key ID="STR_tts_emission_moduleChangeSettings_title_alt">
 				<Original>Emission Settings</Original>
 				<English>Emission Settings</English>
+                <Korean>방사능 방출 설정</Korean>
 			</Key>
             <Key ID="STR_tts_emission_moduleChangeSettings_desc">
 				<Original>Configures settings for TTS Emission script.</Original>
 				<English>Configures settings for TTS Emission script.</English>
+                <Korean>TTS Emission 스크립트에 대한 설정을 구성합니다.</Korean>
 			</Key>
             <Key ID="STR_tts_emission_moduleChangeSettings_heading">
 				<Original>Configure Emission Settings</Original>
 				<English>Configure Emission Settings</English>
+                <Korean>방사능 방출 설정 변경</Korean>
 			</Key>
             <Key ID="STR_tts_emission_moduleChangeSettings_warning">
 				<Original>WARNING: Some setting changes may not apply until after the emission is finished!</Original>
 				<English>WARNING: Some setting changes may not apply until after the emission is finished!</English>
+                <Korean>경고: 일부 설정 변경 사항은 방츨이 완료될 때까지 적용되지 않을 수 있습니다!</Korean>
 			</Key>
             <Container name="Emission type param">
                 <Key ID="STR_tts_emission_moduleChangeSettings_emissionType">
                     <Original>Emission type</Original>
                     <English>Emission type</English>
+                    <Korean>방출 유형</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_emissionType_desc">
-                    <Original>Which wave type to use for the emission.\nMap Sweep - Wave passes over entire map from the North, the wave will hit areas at the top of the map earlier\nFixed Distance - Wave is always a fixed distance from players but will hit all units on the map at the same time (good for infantry only/PVP/RP missions)</Original>
-                    <English>Which wave type to use for the emission.\nMap Sweep - Wave passes over entire map from the North, the wave will hit areas at the top of the map earlier\nFixed Distance - Wave is always a fixed distance from players but will hit all units on the map at the same time (good for infantry only/PVP/RP missions)</English>
+                    <Original>Which wave type to use for the emission.\nMap Sweep - Wave passes over the entire map, the wave will hit different areas of the map dynamically depending on the approach direction\nFixed Distance - Wave is always a fixed distance from players but will hit all units on the map at the same time (good for infantry only/PVP/RP missions)</Original>
+                    <English>Which wave type to use for the emission.\nMap Sweep - Wave passes over the entire map, the wave will hit different areas of the map dynamically depending on the approach direction\nFixed Distance - Wave is always a fixed distance from players but will hit all units on the map at the same time (good for infantry only/PVP/RP missions)</English>
+                    <Korean>방사능 방출에 사용될 웨이브 유형입니다.\n맵 휩쓸기 - 웨이브가 전체 맵을 통과하고, 접근 방향에 따라 동적으로 맵의 다른 영역에 충돌합니다.\n고정 거리 - 웨이브는 항상 플레이어로부터 일정한 거리로 지도의 모든 유닛을 동시에 타격할 수 있습니다 (보병 전용/PVP/RP 임무에 적합).</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_emissionType_mapSweep">
                     <Original>Map Sweep</Original>
                     <English>Map Sweep</English>
+                    <Korean>맵 휩쓸기</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_emissionType_fixedDistance">
                     <Original>Fixed Distance</Original>
                     <English>Fixed Distance</English>
+                    <Korean>고정 거리</Korean>
                 </Key>
             </Container>
             <Key ID="STR_tts_emission_moduleChangeSettings_emissionEffect_killUnsheltered">
                 <Original>Kill unsheltered</Original>
                 <English>Kill unsheltered</English>
+                <Korean>피복되지 않고 죽이기</Korean>
             </Key>
             <Key ID="STR_tts_emission_moduleChangeSettings_emissionEffect_knockoutUnsheltered">
                 <Original>Knockout unsheltered</Original>
                 <English>Knockout unsheltered</English>
+                <Korean>피복되지 않고 기절시키기</Korean>
             </Key>
             <Key ID="STR_tts_emission_moduleChangeSettings_emissionEffect_killAll">
                 <Original>Kill all</Original>
                 <English>Kill all</English>
+                <Korean>모두 죽이기</Korean>
             </Key>
             <Key ID="STR_tts_emission_moduleChangeSettings_emissionEffect_knockoutAll">
                 <Original>Knockout all</Original>
                 <English>Knockout all</English>
+                <Korean>모두 기절시키기</Korean>
             </Key>
             <Key ID="STR_tts_emission_moduleChangeSettings_emissionEffect_noEffect">
                 <Original>No effect</Original>
                 <English>No effect</English>
+                <Korean>효과 없애기</Korean>
             </Key>
             <Container name="Player effect param">
                 <Key ID="STR_tts_emission_moduleChangeSettings_playerEffect">
                     <Original>Player effect</Original>
                     <English>Player effect</English>
+                    <Korean>플레이어 효과</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_playerEffect_desc">
                     <Original>How should the emission affect player units?</Original>
                     <English>How should the emission affect player units?</English>
+                    <Korean>방사능 방출에 플레이어 유닛에게 어떤 영향을 미치게하실건가요?</Korean>
                 </Key>
             </Container>
             <Container name="AI effect param">
                 <Key ID="STR_tts_emission_moduleChangeSettings_aiEffect">
                     <Original>AI effect</Original>
                     <English>AI effect</English>
+                    <Korean>인공지능 효과</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_aiEffect_desc">
                     <Original>How should the emission affect non-player units?</Original>
                     <English>How should the emission affect non-player units?</English>
+                    <Korean>방사능 방출에 플레이어가 아닌 인공지능에게 어떤 영향을 미치게 하실건가요?</Korean>
                 </Key>
             </Container>
             <Container name="Aircraft effect param">
                 <Key ID="STR_tts_emission_moduleChangeSettings_aircraftEffect">
                     <Original>Aircraft effect</Original>
                     <English>Aircraft effect</English>
+                    <Korean>공항 효과</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_aircraftEffect_desc">
                     <Original>How does the emission affect flying aircraft (altitude > 15m)?</Original>
                     <English>How does the emission affect flying aircraft (altitude > 15m)?</English>
+                    <Korean>방사능 방출에 비행 항공기(고도 > 15m)에 어떤 영향을 미치게 하실건가요?</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_aircraftEffect_lightningBolt">
                     <Original>Lightning bolt</Original>
                     <English>Lightning bolt</English>
+                    <Korean>번개</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_aircraftEffect_engineFailure">
                     <Original>Engine failure</Original>
                     <English>Engine failure</English>
+                    <Korean>엔진 고장내기</Korean>
                 </Key>
             </Container>
             <Container name="Siren type param">
                 <Key ID="STR_tts_emission_moduleChangeSettings_sirenType">
                     <Original>Siren type</Original>
                     <English>Siren type</English>
+                    <Korean>사이렌 유형</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_sirenType_desc">
                     <Original>What type of siren should play to warn of the emission?</Original>
                     <English>What type of siren should play to warn of the emission?</English>
+                    <Korean>방사능 방출을 경고하기 위해 사이렌 종류 선택</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_sirenType_classic">
                     <Original>Classic</Original>
                     <English>Classic</English>
+                    <Korean>고전적</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_sirenType_dramatic">
                     <Original>Dramatic</Original>
                     <English>Dramatic</English>
+                    <Korean>드라마틱</Korean>
                 </Key>
             </Container>
             <Container name="Use physical siren param">
                 <Key ID="STR_tts_emission_moduleChangeSettings_usePhysicalSiren">
                     <Original>Use physical siren</Original>
                     <English>Use physical siren</English>
+                    <Korean>물리적 사이렌 사용</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_usePhysicalSiren_desc">
                     <Original>If checked, siren will play from the object with varname 'tts_emission_sirenObj' if found (can only be one per mission)</Original>
                     <English>If checked, siren will play from the object with varname 'tts_emission_sirenObj' if found (can only be one per mission)</English>
+                    <Korean>이 옵션을 선택하면 varname 'tts_emission_sirenObj'가 있는 개체에서 사이렌이 재생됩니다(미션당 하나씩만 가능)</Korean>
                 </Key>
             </Container>
             <Container name="Protection equipment param">
                 <Key ID="STR_tts_emission_moduleChangeSettings_protectionEquipment">
                     <Original>Protection equipment</Original>
                     <English>Protection equipment</English>
+                    <Korean>보호 장비</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_protectionEquipment_desc">
                     <Original>Comma seperated classnames of headgear, facewear, NVGs, uniforms, vests or bags that units can wear to survive emissions outside of shelter</Original>
                     <English>Comma seperated classnames of headgear, facewear, NVGs, uniforms, vests or bags that units can wear to survive emissions outside of shelter</English>
+                    <Korean>클래스네임으로 구분된 헤드기어, 페이스 웨어, NVG, 유니폼, 조끼 또는 가방의 클래스 네임으로 수용 시설 밖에서 배출되는 배출물을 생존하기 위해 착용할 수 있습니다.(코드 입력한뒤 콤마기입 필수 예:"CODE","")</Korean>
                 </Key>
             </Container>
             <Container name="Shelter types param">
                 <Key ID="STR_tts_emission_moduleChangeSettings_shelterTypes">
                     <Original>Shelter types</Original>
                     <English>Shelter types</English>
+                    <Korean>시설 타입</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_shelterTypes_desc">
                     <Original>Comma seperated classnames of structures/vehicles that protect from the emission\nAll objects that inherit from these classes will also provide protection\nDefaults are 'Building', 'Car', 'Tank', 'Air', 'Ship'.</Original>
                     <English>Comma seperated classnames of structures/vehicles that protect from the emission\nAll objects that inherit from these classes will also provide protection\nDefaults are 'Building', 'Car', 'Tank', 'Air', 'Ship'.</English>
+                    <Korean>방출로부터 보호하는 구조/차량의 쉼표 구분 클래스 이름\n이 클래스에서 상속되는 모든 개체도 보호를 제공합니다\n기본적으로 'Building', 'Car', 'Tank', 'Air', 'Ship'이 설정되어있습니다.</Korean>
                 </Key>
             </Container>
             <Container name="Immune units param">
                 <Key ID="STR_tts_emission_moduleChangeSettings_immuneUnits">
                     <Original>Immune units</Original>
                     <English>Immune units</English>
+                    <Korean>면역체계</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_immuneUnits_desc">
                     <Original>Comma seperated classnames or variable names of units that are not affected by emissions</Original>
                     <English>Comma seperated classnames or variable names of units that are not affected by emissions</English>
+                    <Korean>방사능 방출의 영향을 받지 않는 클래스네임 또는 가변적인 장치 이름(예:"Classname","")</Korean>
                 </Key>
             </Container>
             <Container name="Wave speed param">
                 <Key ID="STR_tts_emission_moduleChangeSettings_waveSpeed">
                     <Original>Wave speed</Original>
                     <English>Wave speed</English>
+                    <Korean>파동 속도</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_waveSpeed_desc">
                     <Original>Speed in m/s wave travels (only applies to map sweep emission)</Original>
                     <English>Speed in m/s wave travels (only applies to map sweep emission)</English>
+                    <Korean>m/s 파동 이동 속도(맵을 휩쓰는 방사능 방출에만 적용됨)</Korean>
                 </Key>
             </Container>
             <Container name="Approach direction param">
                 <Key ID="STR_tts_emission_moduleChangeSettings_approachDirection">
                     <Original>Approach direction</Original>
                     <English>Approach direction</English>
+                    <Korean>접근 방향</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_approachDirection_desc">
                     <Original>The direction the emission will come from (only applies to map sweep emission)</Original>
                     <English>The direction the emission will come from (only applies to map sweep emission)</English>
+                    <Korean>방출이 발생하는 방향(맵을 휩쓰는 방사능 방출에만 적용됨)</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_approachDirection_north">
                     <Original>North</Original>
                     <English>North</English>
+                    <Korean>북쪽</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_approachDirection_east">
                     <Original>East</Original>
                     <English>East</English>
+                    <Korean>동쪽</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_approachDirection_south">
                     <Original>South</Original>
                     <English>South</English>
+                    <Korean>서쪽</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_approachDirection_west">
                     <Original>West</Original>
                     <English>West</English>
+                    <Korean>남쪽</Korean>
                 </Key>
             </Container>
             <Container name="Show emission on map param">
                 <Key ID="STR_tts_emission_moduleChangeSettings_showEmissionOnMap">
                     <Original>Show emission on map</Original>
                     <English>Show emission on map</English>
+                    <Korean>지도에 방사능 방출표시</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_showEmissionOnMap_desc">
                     <Original>If checked, the emission's position will be displayed on the map</Original>
                     <English>If checked, the emission's position will be displayed on the map</English>
+                    <Korean>만약 체크하게되면, 방사능 방출 위치가 지도에 표시됩니다</Korean>
                 </Key>
             </Container>
             <Container name="Disable rain effects param">
                 <Key ID="STR_tts_emission_moduleChangeSettings_rainEffects">
                     <Original>Disable rain effects</Original>
                     <English>Disable rain effects</English>
+                    <Korean>비 내리기 비활성화</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleChangeSettings_rainEffects_desc">
                     <Original>If checked, rain after the emission finishes will be disabled (tick this if using weather scripts)</Original>
                     <English>If checked, rain after the emission finishes will be disabled (tick this if using weather scripts)</English>
+                    <Korean>이 옵션을 선택하면,방사능 방출이 끝난 후 비가 내리지 않도록 설정됩니다(날씨 스크립트를 사용하는 경우 이 항목을 선택하십시오).</Korean>
                 </Key>
             </Container>
         </Container>
@@ -235,85 +285,105 @@
             <Key ID="STR_tts_emission_moduleStartEmission_title">
 				<Original>Start Emission</Original>
 				<English>Start Emission</English>
+                <Korean>방사능방출 시작</Korean>
 			</Key>
             <Key ID="STR_tts_emission_moduleStartEmission_desc">
 				<Original>Starts an emission when all synced triggers are activated.</Original>
 				<English>Starts an emission when all synced triggers are activated.</English>
+                <Korean>동기화된 모든 트리거가 활성화되면서 방사능 방출을 시작합니다.</Korean>
 			</Key>
             <Key ID="STR_tts_emission_moduleStartEmission_heading">
 				<Original>Confirm Emission</Original>
 				<English>Confirm Emission</English>
+                <Korean>방사능방출 확인</Korean>
 			</Key>
             <Key ID="STR_tts_emission_moduleStartEmission_inProgress">
 				<Original>Emission already in progress!</Original>
 				<English>Emission already in progress!</English>
+                <Korean>이미 방출이 시작됐습니다!</Korean>
 			</Key>
             <Key ID="STR_tts_emission_moduleStartEmission_warning">
 				<Original>Are you sure you want to start an emission? Once started the emission cannot be stopped until it is complete.</Original>
 				<English>Are you sure you want to start an emission? Once started the emission cannot be stopped until it is complete.</English>
+                <Korean>방사능 방출을 시작하시겠습니까? 한 번 시작된 방출은 전부 소거될때까지 멈출 수 없습니다.</Korean>
 			</Key>
             <Key ID="STR_tts_emission_moduleStartEmission_emissionApproaching">
 				<Original>An emission is approaching!</Original>
 				<English>An emission is approaching!</English>
+                <Korean>방사능이 다가오고 있습니다!</Korean>
 			</Key>
         </Container>
         <Container name="Start random emissions module">	
             <Key ID="STR_tts_emission_moduleStartRandomEmissions_title">
 				<Original>Start Random Emissions</Original>
 				<English>Start Random Emissions</English>
+                <Korean>무작위 방사능 방출시작</Korean>
 			</Key>
             <Key ID="STR_tts_emission_moduleStartRandomEmissions_desc">
 				<Original>This module will start random emissions during the mission until the 'tts_emission_randomEmissions' variable is set to false.</Original>
 				<English>This module will start random emissions during the mission until the 'tts_emission_randomEmissions' variable is set to false.</English>
+                <Korean>이 모듈은 'tts_emission_randomEmissions' 변수가 false로 설정될 때까지 임무 중에 무작위로 방출을 시작합니다.</Korean>
 			</Key>
             <Container name="Min delay param">
                 <Key ID="STR_tts_emission_moduleStartRandomEmissions_minDelay">
                     <Original>Minimum delay</Original>
                     <English>Minimum delay</English>
+                    <Korean>최소 지연 시간</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleStartRandomEmissions_minDelay_desc">
                     <Original>Minimum number of minutes between one emission ending and the next one starting</Original>
                     <English>Minimum number of minutes between one emission ending and the next one starting</English>
+                    <Korean>방출 종료후, 다음 방사능 방출 시작 최소 시간(분)</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleStartRandomEmissions_maxDelay">
                     <Original>Maximum delay</Original>
                     <English>Maximum delay</English>
+                    <Korean>최대 지연 시간</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleStartRandomEmissions_maxDelay_desc">
                     <Original>Maximum number of minutes between one emission ending and the next one starting</Original>
                     <English>Maximum number of minutes between one emission ending and the next one starting</English>
+                    <Korean>방출 종료후, 다음 방사능 방출 시작 최대 시간(분)</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleStartRandomEmissions_minSpeed">
                     <Original>Minimum speed</Original>
                     <English>Minimum speed</English>
+                    <Korean>최소 속도</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleStartRandomEmissions_minSpeed_desc">
                     <Original>Minimum speed of random emissions in m/s</Original>
                     <English>Minimum speed of random emissions in m/s</English>
+                    <Korean>방사능 방출의 최소 속도(m/s)</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleStartRandomEmissions_maxSpeed">
                     <Original>Maximum speed</Original>
                     <English>Maximum speed</English>
+                    <Korean>최고 속도</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleStartRandomEmissions_maxSpeed_desc">
                     <Original>Maximum speed of random emissions in m/s</Original>
                     <English>Maximum speed of random emissions in m/s</English>
+                    <Korean>방사능 방출의 최고 속도(m/s)</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleStartRandomEmissions_randomiseDirection">
                     <Original>Randomise direction</Original>
                     <English>Randomise direction</English>
+                    <Korean>무작위 방향</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleStartRandomEmissions_randomiseDirection_desc">
                     <Original>If enabled, a random approach direction will be selected for each emission</Original>
                     <English>If enabled, a random approach direction will be selected for each emission</English>
+                    <Korean>활성화가 될 경우 각 방사능 방출에 대해 임의의 접근 방향이 선택됩니다. </Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleStartRandomEmissions_stopRandomEmissions">
                     <Original>Stop random emissions</Original>
                     <English>Stop random emissions</English>
+                    <Korean>무작위 방사능 방출을 중단합니다</Korean>
                 </Key>
                 <Key ID="STR_tts_emission_moduleStartRandomEmissions_stopRandomEmissions_desc">
                     <Original>If this is checked, instead of starting random emissions the module will stop the random emissions function if it is running\nThe other parameters will not take effect if this parameter is checked</Original>
                     <English>If this is checked, instead of starting random emissions the module will stop the random emissions function if it is running\nThe other parameters will not take effect if this parameter is checked</English>
+                    <Korean>이 옵션을 선택할경우, 모듈이 방사능 방출을 시작하는 대신 작동 중인 경우 방사능 방출 기능을 중지합니다\n이 매개 변수를 선택하면 다른 매개 변수에는 적용되지 않습니다.</Korean>
                 </Key>
             </Container>
         </Container>
