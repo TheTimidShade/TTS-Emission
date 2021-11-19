@@ -43,6 +43,10 @@ ___
 - [Available settings](https://github.com/TheTimidShade/Timid-Emission/wiki/Available-settings)
 - [Function documentation](https://github.com/TheTimidShade/Timid-Emission/wiki/Function-documentation)
 
+### **Supported Languages:**
+- English
+- Korean (Translation by Taru)
+
 ___
 
 
