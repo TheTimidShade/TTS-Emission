@@ -43,6 +43,10 @@ ___
 - [Available settings](https://github.com/TheTimidShade/Timid-Emission/wiki/Available-settings)
 - [Function documentation](https://github.com/TheTimidShade/Timid-Emission/wiki/Function-documentation)
 
+### **License:**
+[Arma Public License No Derivatives (APL-ND)](https://www.bohemia.net/community/licenses/arma-public-license-nd)  
+You can freely use the script in your missions, private or uploaded to the Steam Workshop but you must not use any parts of the script in another mod without my permission.
+
 ### **Supported Languages:**
 - English
 - Korean (Translation by Taru)
