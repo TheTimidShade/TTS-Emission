@@ -1,6 +1,9 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 19/11/2021
+- Added Korean translation by Taru.
+
 ### 13/11/2021
 Applied changes from script version:
 - Added a new function `fn_startRandomEmissions` which can be used to create emissions at random intervals. (Suggested by Apocalypsis)
