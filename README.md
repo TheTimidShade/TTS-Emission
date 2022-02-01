@@ -28,12 +28,6 @@ This is the script version, a [mod version](https://github.com/TheTimidShade/Tim
 **For help with troubleshooting, questions or feedback, join my [Discord](https://discord.gg/8Y2ENWQMpK)**
 ___
 
-There are two types of emissions to choose from:
-
-**Map Sweep** - The emission will sweep the map from one side to the other, so the time at which units are hit by the wave is dynamic depending on their position on the map. The 'Wave Speed', 'Show Emission on Map' and 'Approach Direction' parameters only apply to this emission type.
-
-**Fixed Distance** - The emission will start at a fixed distance away from players so all players and units on the map are hit at the same time. Since the emission is fixed to the player, no matter how fast you fly away from the wave it will still hit you, so this can look weird from aircraft. Mainly suited towards player only/infantry/RP missions. (This was v1 before I designed the map sweep version)
-
 To shelter yourself from the emission, you must have a structure or vehicle considered to be shelter above your head within 30m. By default, objects considered shelter are anything that inherits from the classes 'Building', 'Car', 'Tank', 'Air' or 'Ship'. These classes can be adjusted in the settings if desired.
 
 ___
@@ -76,6 +70,19 @@ ___
 
 ## Changelog
 Read below for complete changelog history.
+
+### 18/02/2022
+- Fixed distance emission is no longer supported.
+- Camera shake is now tied to the camera's distance to the emission wave rather than the player's and sounds are now played relative to the camera.
+- Increased audible distance for emission pulse sounds and create them further away so that they are still audible when moving rapidly.
+- Adjusted light source attenuation so the sky light isn't concentrated around the player.
+- The player is no longer affected by the emission wave if they have damage disabled.
+- AI now use the same shelter check as players.
+- Added a parameter to select what effect the emission has on non-flying vehicles (ground vehicles/ships/landed aircraft).
+- Cleaned up damage related functions so there should be no clash between player/AI effect and aircraft/vehicle effect parameters.
+- Fixed an issue where lightning bolts would not appear correctly in multiplayer.
+- Static weapons are not affected by the emission.
+- Updated default settings for 'Start Random Emissions' ZEN module (defaults were still in seconds rather than minutes).
 
 ### 19/11/2021
 - Added Korean translation by Taru.

@@ -15,8 +15,9 @@
 params ["_brightness", "_delay"];
 
 private _flash = "#lightpoint" createVehicleLocal (getPos player);
-private _flashPos = getPosASL player;
-_flash setPosASL [_flashPos#0, _flashPos#1, _flashPos#2+1000];
+private _flashPos = (positionCameraToWorld [0,0,0]) getPos [random 4000, random 360];
+_flashPos set [2, 1400];
+_flash setPosASL _flashPos;
 _flash setLightBrightness _brightness;
 _flash setLightAmbient [1,1,1];
 _flash setLightColor [1,1,1];

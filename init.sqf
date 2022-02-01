@@ -1,6 +1,6 @@
-tts_emission_emissionType = 0;
 tts_emission_playerEffect = 0;
 tts_emission_aiEffect = 1;
+tts_emission_vehicleEffect = 3;
 tts_emission_aircraftEffect = 0;
 tts_emission_useSirenObject = false;
 tts_emission_sirenType = 0;
