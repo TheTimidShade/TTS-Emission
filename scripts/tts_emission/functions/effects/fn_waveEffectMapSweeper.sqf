@@ -45,11 +45,11 @@ _waveObject spawn { // handle sound
 	params ["_waveObject", "_distance"];
 	enableCamShake true;
 	while {alive _waveObject} do {
-		waitUntil {sleep 0.1; !alive _waveObject || {player distance2D _waveObject < 3000}};
+		waitUntil {sleep 0.1; !alive _waveObject || {(positionCameraToWorld [0,0,0]) distance2D _waveObject < 3000}}; // play wave approach sound within 3000m
 		if (alive _waveObject) then {playSound "blowout_wave_01"};
-		waitUntil {sleep 0.1; !alive _waveObject || {player distance2D _waveObject < 1400}};
-		while {alive _waveObject && {player distance2D _waveObject < 1400}} do {
-			private _shakeCoef = 1-((player distance _waveObject)/_distance); // shake intensifies as wave approaches
+		waitUntil {sleep 0.1; !alive _waveObject || {(positionCameraToWorld [0,0,0]) distance2D _waveObject < _distance}}; // camera shake within 1400m of wave
+		while {alive _waveObject && {(positionCameraToWorld [0,0,0]) distance2D _waveObject < _distance}} do {
+			private _shakeCoef = 1-(((positionCameraToWorld [0,0,0]) distance _waveObject)/_distance); // shake intensifies as wave approaches
 			addCamShake [3*(_shakeCoef^2), 2, 10];
 			sleep 0.2;
 		};

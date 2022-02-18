@@ -120,6 +120,28 @@
                     <Korean>방사능 방출에 플레이어가 아닌 인공지능에게 어떤 영향을 미치게 하실건가요?</Korean>
                 </Key>
             </Container>
+            <Container name="Vehicle effect param">
+                <Key ID="STR_tts_emission_moduleChangeSettings_vehicleEffect">
+                    <Original>Vehicle effect</Original>
+                    <English>Vehicle effect</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_vehicleEffect_desc">
+                    <Original>How does the emission affect vehicles?</Original>
+                    <English>How does the emission affect vehicles?</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_vehicleEffect_disableEngine">
+                    <Original>Disable engine</Original>
+                    <English>Disable engine</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_vehicleEffect_lightningBolt_engineOn">
+                    <Original>Lightning bolt (if engine is on)</Original>
+                    <English>Lightning bolt (if engine is on)</English>
+                </Key>
+                <Key ID="STR_tts_emission_moduleChangeSettings_vehicleEffect_disableEngine_engineOn">
+                    <Original>Disable engine (if engine is on)</Original>
+                    <English>Disable engine (if engine is on)</English>
+                </Key>
+            </Container>
             <Container name="Aircraft effect param">
                 <Key ID="STR_tts_emission_moduleChangeSettings_aircraftEffect">
                     <Original>Aircraft effect</Original>
