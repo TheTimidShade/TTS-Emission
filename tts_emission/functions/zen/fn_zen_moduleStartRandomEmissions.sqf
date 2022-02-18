@@ -7,7 +7,7 @@
 		[ // array of controls for dialog
 			["EDIT", ["STR_tts_emission_moduleStartRandomEmissions_minDelay", "STR_tts_emission_moduleStartRandomEmissions_minDelay_desc"],
 				[ // control args
-					"1800", // default text
+					"30", // default text
 					{}, // sanitise function
 					1 // edit box height (only for multi line)
 				],
@@ -15,7 +15,7 @@
 			],
 			["EDIT", ["STR_tts_emission_moduleStartRandomEmissions_maxDelay", "STR_tts_emission_moduleStartRandomEmissions_maxDelay_desc"],
 				[ // control args
-					"2700", // default text
+					"45", // default text
 					{}, // sanitise function
 					1 // edit box height (only for multi line)
 				],

@@ -17,9 +17,10 @@ if (tts_emission_emissionIsActive) exitWith {}; // if there is already an emissi
 
 // configure settings if they are not defined or invalid
 /*
-	tts_emission_emissionType - 0 = map sweeper, wave sweeps map from top to bottom, 1 = fixed distance, wave hits at same time for everyone on the map
+	tts_emission_emissionType - 0 = map sweeper, wave sweeps map from top to bottom, 1 = fixed distance
 	tts_emission_playerEffect - 0 = kill unsheltered units, 1 = knockout unsheltered units, 2 = kill all, 3 = knockout all, 4 = no effect
 	tts_emission_aiEffect - 0 = kill unsheltered units, 1 = knockout unsheltered units, 2 = kill all, 3 = knockout all, 4 = no effect
+	tts_emission_vehicleEffect - 0 = bolt vehicle, 1 = disable engine, 2 = bolt vehicle if engine on, 3 = disable engine if engine on, 4 = no effect
 	tts_emission_aircraftEffect - 0 = strike aircraft, 1 = disable aircraft, 2 = no effect
 	tts_emission_sirenType - 0 = classic, 1 = dramatic, 2 = none
 	tts_emission_useSirenObject - true = Siren warning will be emitted from object instead of played in player's ears
@@ -31,9 +32,10 @@ if (tts_emission_emissionIsActive) exitWith {}; // if there is already an emissi
 */
 
 // if not defined, set to default
-if (isNil "tts_emission_emissionType") then {tts_emission_emissionType = 0;};
+if (isNil "tts_emission_emissionType") then {tts_emission_emissionType = 0;}; // FIXED DISTANCE NO LONGER SUPPORTED
 if (isNil "tts_emission_playerEffect") then {tts_emission_playerEffect = 0;};
 if (isNil "tts_emission_aiEffect") then {tts_emission_aiEffect = 1;};
+if (isNil "tts_emission_vehicleEffect") then {tts_emission_vehicleEffect = 3;};
 if (isNil "tts_emission_aircraftEffect") then {tts_emission_aircraftEffect = 0;};
 if (isNil "tts_emission_sirenType") then {tts_emission_sirenType = 0;};
 if (isNil "tts_emission_useSirenObject") then {tts_emission_useSirenObject = false;};
@@ -49,6 +51,7 @@ if (isNil "tts_emission_disableRain") then {tts_emission_disableRain = false;};
 if (!(tts_emission_emissionType in [0,1])) then {tts_emission_emissionType = 0;};
 if (!(tts_emission_playerEffect in [0,1,2,3,4])) then {tts_emission_playerEffect = 0;};
 if (!(tts_emission_aiEffect in [0,1,2,3,4])) then {tts_emission_aiEffect = 1;};
+if (!(tts_emission_vehicleEffect in [0,1,2,3,4])) then {tts_emission_vehicleEffect = 3;};
 if (!(tts_emission_aircraftEffect in [0,1,2])) then {tts_emission_aircraftEffect = 0;};
 if (!(tts_emission_sirenType in [0,1,2])) then {tts_emission_sirenType = 0;};
 if (!(tts_emission_useSirenObject in [true,false])) then {tts_emission_useSirenObject = false;};
@@ -62,6 +65,7 @@ if (!(tts_emission_disableRain in [true,false])) then {tts_emission_disableRain 
 	"tts_emission_emissionType",
 	"tts_emission_playerEffect",
 	"tts_emission_aiEffect",
+	"tts_emission_vehicleEffect",
 	"tts_emission_aircraftEffect",
 	"tts_emission_sirenType",
 	"tts_emission_useSirenObject",

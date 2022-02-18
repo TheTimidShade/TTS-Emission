@@ -18,11 +18,11 @@ params ["_sound"];
 private _source = "Sign_Sphere10cm_F" createVehicleLocal [0,0,0];
 _source hideObject true;
 private _direction = round random 360;
-private _sourcePos = player getRelPos [15 + (random 10), _direction];
+private _sourcePos = (positionCameraToWorld [0,0,0]) getPos [50 + (random 50), _direction];
 private _playerHeight = (getPosASL player)#2;
-_source setPosASL [_sourcePos#0, _sourcePos#1, _playerHeight+20];
+_source setPosASL [_sourcePos#0, _sourcePos#1, ((positionCameraToWorld [0,0,0])#2) + 30];
 
-_source say3D [_sound, 400, 1, false];
+_source say3D [_sound, 1200, 1, false];
 
 sleep 30;
 

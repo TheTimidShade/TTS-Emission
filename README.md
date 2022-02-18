@@ -1,6 +1,20 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 18/02/2022
+Applied changes from script version:
+- Fixed distance emission is no longer supported.
+- Camera shake is now tied to the camera's distance to the emission wave rather than the player's and sounds are now played relative to the camera.
+- Increased audible distance for emission pulse sounds and create them further away so that they are still audible when moving rapidly.
+- Adjusted light source attenuation so the sky light isn't concentrated around the player.
+- The player is no longer affected by the emission wave if they have damage disabled.
+- AI now use the same shelter check as players.
+- Added a parameter to select what effect the emission has on non-flying vehicles (ground vehicles/ships/landed aircraft).
+- Cleaned up damage related functions so there should be no clash between player/AI effect and aircraft/vehicle effect parameters.
+- Fixed an issue where lightning bolts would not appear correctly in multiplayer.
+- Static weapons are not affected by the emission.
+- Updated default settings for 'Start Random Emissions' ZEN module (defaults were still in seconds rather than minutes).
+
 ### 19/11/2021
 - Added Korean translation by Taru.
 
