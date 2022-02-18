@@ -37,7 +37,7 @@ class CfgVehicles {
 		function = "tts_emission_fnc_moduleEmissionSettings";
 		
 		class Attributes : AttributesBase {
-			class EmissionType : Combo {
+			/*class EmissionType : Combo {
 				property = "tts_emission_moduleEmissionSettings_EmissionType";
 				displayName = "$STR_tts_emission_moduleChangeSettings_emissionType";
 				tooltip = "$STR_tts_emission_moduleChangeSettings_emissionType_desc";
@@ -48,7 +48,7 @@ class CfgVehicles {
 					class MapSweep {name = "$STR_tts_emission_moduleChangeSettings_emissionType_mapSweep"; value = 0;}; // Listbox item
 					class FixedDistance {name = "$STR_tts_emission_moduleChangeSettings_emissionType_fixedDistance"; value = 1;};
 				};
-			};
+			};*/
 			class PlayerEffect : Combo {
 				property = "tts_emission_moduleEmissionSettings_PlayerEffect";
 				displayName = "$STR_tts_emission_moduleChangeSettings_playerEffect";
@@ -76,6 +76,21 @@ class CfgVehicles {
 					class KnockoutUnsheltered {name = "$STR_tts_emission_moduleChangeSettings_emissionEffect_knockoutUnsheltered"; value = 1;};
 					class KillAll {name = "$STR_tts_emission_moduleChangeSettings_emissionEffect_killAll"; value = 2;};
 					class KnockoutAll {name = "$STR_tts_emission_moduleChangeSettings_emissionEffect_knockoutAll"; value = 3;};
+					class NoEffect {name = "$STR_tts_emission_moduleChangeSettings_emissionEffect_noEffect"; value = 4;};
+				};
+			};
+			class VehicleEffect : Combo {
+				property = "tts_emission_moduleEmissionSettings_VehicleEffect";
+				displayName = "$STR_tts_emission_moduleChangeSettings_vehicleEffect";
+				tooltip = "$STR_tts_emission_moduleChangeSettings_vehicleEffect_desc";
+				typeName = "NUMBER";
+				defaultValue = "3";
+				class Values
+				{
+					class LightningBolt {name = "$STR_tts_emission_moduleChangeSettings_aircraftEffect_lightningBolt"; value = 0;}; // Listbox item
+					class EngineFailure {name = "$STR_tts_emission_moduleChangeSettings_vehicleEffect_disableEngine"; value = 1;};
+					class LightningBoltOn {name = "$STR_tts_emission_moduleChangeSettings_vehicleEffect_lightningBolt_engineOn"; value = 2;};
+					class EngineFailureOn {name = "$STR_tts_emission_moduleChangeSettings_vehicleEffect_disableEngine_engineOn"; value = 3;};
 					class NoEffect {name = "$STR_tts_emission_moduleChangeSettings_emissionEffect_noEffect"; value = 4;};
 				};
 			};

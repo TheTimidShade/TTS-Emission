@@ -15,6 +15,9 @@ Applied changes from script version:
 - Static weapons are not affected by the emission.
 - Updated default settings for 'Start Random Emissions' ZEN module (defaults were still in seconds rather than minutes).
 
+Mod version specific changes:
+- Updated editor modules.
+
 ### 19/11/2021
 - Added Korean translation by Taru.
 

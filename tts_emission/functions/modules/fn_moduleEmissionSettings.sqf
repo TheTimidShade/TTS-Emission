@@ -22,9 +22,10 @@ params [
 if (!isServer) exitWith {};
 
 if (_activated) then {
-	tts_emission_emissionType = _module getVariable ["EmissionType", 0];
+	//tts_emission_emissionType = _module getVariable ["EmissionType", 0];
 	tts_emission_playerEffect = _module getVariable ["PlayerEffect", 0];
 	tts_emission_aiEffect = _module getVariable ["AIEffect", 1];
+	tts_emission_vehicleEffect = _module getVariable ["VehicleEffect", 3];
 	tts_emission_aircraftEffect = _module getVariable ["AircraftEffect", 0];
 	tts_emission_useSirenObject = _module getVariable ["UsePhysicalSiren", false];
 	tts_emission_sirenType = _module getVariable ["SirenType", 0];
@@ -37,9 +38,10 @@ if (_activated) then {
 	tts_emission_disableRain = _module getVariable ["DisableRain", false];
 
 	{publicVariable _x} forEach [
-		"tts_emission_emissionType",
+		//"tts_emission_emissionType",
 		"tts_emission_playerEffect",
 		"tts_emission_aiEffect",
+		"tts_emission_vehicleEffect",
 		"tts_emission_aircraftEffect",
 		"tts_emission_useSirenObject",
 		"tts_emission_sirenType",
