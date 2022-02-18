@@ -16,8 +16,10 @@ params [
 ];
 
 if (isNull _unit) exitWith {false};
-if (((getPosASL _unit)#2) <= -2) exitWith {true}; // if unit is more than 2m underwater, they are safe
 if ([_unit] call tts_emission_fnc_isImmune) exitWith {true}; // if the unit is immune they are safe
+if (isPlayer _unit && tts_emission_playerEffect in [2,3]) exitWith {false}; // The player cannot be sheltered when the 'Knockout all'/'Kill all' parameter is selected
+if (!isPlayer _unit && tts_emission_aiEffect in [2,3]) exitWith {false}; // The AI cannot be sheltered when the 'Knockout all'/'Kill all' parameter is selected
+if (((getPosASL _unit)#2) <= -2) exitWith {true}; // if unit is more than 2m underwater, they are safe
 
 private _isSafe = false;
 

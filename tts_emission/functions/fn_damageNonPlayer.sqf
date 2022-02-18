@@ -12,7 +12,6 @@
 */
 
 if (!isServer) exitWith {}; // only run on server/host client
-if (tts_emission_aiEffect == 4) exitWith {}; // if emission does not affect non-players, exit
 
 params [
 	["_unitArray", [], [[]]]
@@ -39,7 +38,7 @@ private _disabledUnits = [];
 	if (_unit getVariable ["tts_emission_affectedByWave", false]) then { continue }; // skip units that have already been affected by the wave in the last 10s
 	
 	// check unit
-	if (!(_unit call tts_emission_fnc_isSafe) || tts_emission_aiEffect in [2,3]) then { // check if they are safe from the emission
+	if (!(_unit call tts_emission_fnc_isSafe) && tts_emission_aiEffect != 4) then { // check if they are safe from the emission
 		if (tts_emission_aiEffect in [0,2] && !(_unit call tts_emission_fnc_hasProtection)) then { // if emission is lethal to ai
 			_unit setDamage 1;
 			_unit setVariable ["tts_emission_affectedByWave", true, true];
