@@ -121,12 +121,7 @@ sleep 15; // small sleep to simulate unconscious period
 			[_unit, _x] remoteExec ["enableAI", _unit, false];
 		};
 	} forEach ["MOVE", "AUTOTARGET", "TARGET", "WEAPONAIM"];
-
-	if (_ace_enabled) then { // ace does some weird stuff with playMove, AI never wake up as a result
-		[_unit, "AmovPpneMstpSnonWnonDnon"] remoteExec ["switchMove", _unit, false];
-	} else {
-		[_unit, "AmovPpneMstpSnonWnonDnon"] remoteExec ["playMove", _unit, false];
-	};
+	[_unit, "AmovPpneMstpSnonWnonDnon"] remoteExec ["switchMove", _unit, false];
 	
 	_unit setVariable ["tts_emission_ai_isUnconscious", false, true];
 } forEach _disabledUnits;

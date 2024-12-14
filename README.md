@@ -1,6 +1,9 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 14/12/2024
+- Fixed an issue where AI might get stuck in the unconscious animation when ACE is enabled. (Thanks SilenceIsFatto)
+
 ### 18/02/2022
 Applied changes from script version:
 - Fixed distance emission is no longer supported.
