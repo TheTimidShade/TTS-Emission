@@ -1,6 +1,9 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 14/12/2024
+- Fixed an issue where AI were immune to emissions after the first one if non-lethal emissions for AI was enabled.
+
 ### 18/02/2022
 Applied changes from script version:
 - Fixed distance emission is no longer supported.
