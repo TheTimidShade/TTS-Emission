@@ -121,7 +121,8 @@ sleep 15; // small sleep to simulate unconscious period
 			[_unit, _x] remoteExec ["enableAI", _unit, false];
 		};
 	} forEach ["MOVE", "AUTOTARGET", "TARGET", "WEAPONAIM"];
-	[_unit, "AmovPpneMstpSnonWnonDnon"] remoteExec ["playMove", _unit, false];
+	[_unit, "AmovPpneMstpSnonWnonDnon"] remoteExec ["switchMove", _unit, false];
+	
 	_unit setVariable ["tts_emission_ai_isUnconscious", false, true];
 } forEach _disabledUnits;
 
