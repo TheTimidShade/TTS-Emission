@@ -32,6 +32,7 @@ private _fnc_isFirstCrew = {
 };
 
 private _disabledUnits = [];
+private _affectedUnits = [];
 {
 	private _unit = _x;
 	if (_unit call tts_emission_fnc_isZombie) then { continue }; // skip units that are zombies
@@ -42,6 +43,7 @@ private _disabledUnits = [];
 		if (tts_emission_aiEffect in [0,2] && !(_unit call tts_emission_fnc_hasProtection)) then { // if emission is lethal to ai
 			_unit setDamage 1;
 			_unit setVariable ["tts_emission_affectedByWave", true, true];
+			_affectedUnits pushBackUnique _unit;
 		} else { // if emission is non-lethal disable them temporarily
 			if (!(_unit getVariable ["tts_emission_ai_isUnconscious", false])) then {
 				private _unitStatus = [ // preserve unit AI state to avoid conflict
@@ -55,10 +57,8 @@ private _disabledUnits = [];
 				[_unit, "unconscious"] remoteExec ["playMoveNow", _unit, false];
 				_unit setVariable ["tts_emission_ai_isUnconscious", true, true];
 				_unit setVariable ["tts_emission_affectedByWave", true, true];
+				_affectedUnits pushBackUnique _unit;
 			};
-
-			//_unit setUnconscious true;
-			//_unit spawn {sleep 15; _this setUnconscious false;};
 		};
 	};
 
@@ -125,3 +125,8 @@ sleep 15; // small sleep to simulate unconscious period
 	
 	_unit setVariable ["tts_emission_ai_isUnconscious", false, true];
 } forEach _disabledUnits;
+
+// reset unit's status so they can be affected by the emission again
+{
+	_x setVariable ["tts_emission_affectedByWave", false, true];
+} forEach _affectedUnits;

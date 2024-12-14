@@ -38,7 +38,7 @@ ___
 - [Function documentation](https://github.com/TheTimidShade/TTS-Emission/wiki/Function-documentation)
 
 ### **License:**
-This script is licensed under [Arma Public License No Derivatives (APL-ND)](https://www.bohemia.net/community/licenses/arma-public-license-nd). You can freely use the script in your missions, private or uploaded to the Steam Workshop but you must not use any parts of the script in another mod without my permission.
+This script is licensed under [Arma Public License Share Alike (APL-SA)](https://www.bohemia.net/community/licenses/arma-public-license-share-alike).
 
 ### **Supported Languages:**
 - English
@@ -72,6 +72,7 @@ ___
 Read below for complete changelog history.
 
 ### 14/12/2024
+- Fixed an issue where AI were immune to emissions after the first one if non-lethal emissions for AI was enabled.
 - Fixed an issue where AI might get stuck in the unconscious animation when ACE is enabled. (Thanks SilenceIsFatto)
 
 ### 18/02/2022
