@@ -71,6 +71,9 @@ ___
 ## Changelog
 Read below for complete changelog history.
 
+### 14/12/2024
+- Fixed an issue where AI were immune to emissions after the first one if non-lethal emissions for AI was enabled.
+
 ### 18/02/2022
 - Fixed distance emission is no longer supported.
 - Camera shake is now tied to the camera's distance to the emission wave rather than the player's and sounds are now played relative to the camera.
